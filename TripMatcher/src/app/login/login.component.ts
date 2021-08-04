@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   apiLogin: any;
   ready = false;
 
+  loginCorrect = false;
+
   users = [];
 
   constructor(public databaseService: DatabaseService) { }
@@ -33,10 +35,12 @@ export class LoginComponent implements OnInit {
       this.apiLogin = data;
 
       if (this.apiLogin.login == this.loginFormulier.controls.login.value && this.apiLogin.password == this.loginFormulier.controls.password.value) {
-        console.log("correct")
-      this.ready = true;
+        console.log("correct");
+        this.loginCorrect = true;
+        this.ready = true;
       } else {
         console.log("fout");
+        this.loginCorrect = false;
       }
     })
   }

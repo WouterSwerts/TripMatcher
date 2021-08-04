@@ -8,11 +8,13 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PersonalPageComponent } from './personal-page/personal-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    PersonalPageComponent
 
   ],
   imports: [

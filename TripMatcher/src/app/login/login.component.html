@@ -9,4 +9,8 @@
 </form>
 
 
-<p *ngIf="ready">{{apiLogin.password}}</p>
+<p *ngIf="ready">{{apiLogin.login}}</p>
+
+<a *ngIf="loginCorrect" routerLink="personalPage"><button>Page</button></a>
+
+<router-outlet></router-outlet>
