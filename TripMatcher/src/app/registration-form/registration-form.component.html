@@ -1,0 +1,9 @@
+<form [formGroup]="registratieFormulier">
+  <label for="Rlogin">Login: </label>
+  <input type="text" name="Rlogin" id="Rlogin" required formControlName="Rlogin">
+
+  <label for="Rpassword">Password: </label>
+  <input type="Rpassword" name="Rpassword" id="Rpassword" required formControlName="Rpassword">
+
+  <input type="button" value="Registreerf!" (click)="submitRegistration()">
+</form>

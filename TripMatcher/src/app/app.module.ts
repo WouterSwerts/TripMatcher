@@ -9,12 +9,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PersonalPageComponent } from './personal-page/personal-page.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PersonalPageComponent
+    PersonalPageComponent,
+    RegistrationFormComponent
 
   ],
   imports: [

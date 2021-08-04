@@ -8,6 +8,7 @@ $dbDatabank = "tripmatcher";
 
 $db = new PDO("mysql:host=$dbHostname; dbname=$dbDatabank", "$dbUsername", "$dbPassword");
 
+
 function sessionID($user) {
   global $db;
 
