@@ -7,22 +7,24 @@ include "data.php";
 if (isset($_GET["user"])) {
   $userInput = $_GET["user"];
   $userName = userOpvragen($userInput);
+  $password = passwordOpvragen($userInput);
 
   if ($userName === NULL) {
-    jsonresponse(200, "User niet gevonden", $userInput, $userName);
+    jsonresponse(200, "User niet gevonden", $userInput, $userName, $password);
   } else {
-    jsonresponse(200, "User gevonden", $userInput, $userName);
+    jsonresponse(200, "User gevonden", $userInput, $userName, $password);
   }
 } else {
-  jsonresponse(400, "Invalid request", null, null);
+  jsonresponse(400, "Invalid request", null, null, null);
 }
 
-function jsonresponse($statuscode, $message, $userID, $userName, $password) {
+function jsonresponse($statuscode, $message, $userName, $userID, $password) {
   header("HTTP/1.1 ".$statuscode);
 
   $response["status"] = $statuscode;
-  $response["id"] = $userID;
+  $response["message"] = $message;
   $response["login"] = $userName;
+  $response["id"] = $userID;
   $response["password"] = $password;
 
   $jsonencode = json_encode($response);

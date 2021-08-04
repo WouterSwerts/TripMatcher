@@ -23,6 +23,21 @@ function userOpvragen($user) {
   return $resultaat;
 }
 
+function passwordOpvragen($user) {
+  global $db;
+
+  $query = "SELECT * FROM users WHERE login=:user;";
+
+  $stmt = $db->prepare($query);
+  $stmt->bindParam(':user', $user);
+  $stmt->execute();
+
+  $resultaat = $stmt->fetchColumn(2);
+
+
+  return $resultaat;
+}
+
 //echo userOpvragen("test");
 
 
