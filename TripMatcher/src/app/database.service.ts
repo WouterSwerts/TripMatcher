@@ -17,7 +17,7 @@ export class DatabaseService {
     return this.http.get(`${this.baseUrl}?user=${login}`);
   }
 
-  postItem(data: object) : Observable<any> {
+  postItem(data: object): Observable<any> {
     return this.http.post(this.registrationUrl, data);
   }
 }

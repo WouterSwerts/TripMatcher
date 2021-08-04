@@ -8,9 +8,9 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 
 require "dataPost.php"; // DATABANK
 
-if(isset($_POST['user']))
+if(isset($_POST['login']))
 {
-  $naam = $_POST['user'];
+  $naam = $_POST['login'];
   $password = $_POST['password'];
   addUser($naam, $password);
   response(200, "Posted Data", $naam, $password);
@@ -30,6 +30,8 @@ function response($statuscode, $message, $userName, $password){
 
   $json_response = json_encode($response);
 
-  return $json_response;
+
+
+  echo $json_response;
 
 }

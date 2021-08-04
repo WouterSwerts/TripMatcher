@@ -10,14 +10,10 @@ $db = new PDO("mysql:host=$dbHostname; dbname=$dbDatabank", "$dbUsername", "$dbP
 function addUser($newUserLogin, $newUserPassword) {
     global $db;
 
-    $query = "INSERT INTO users (login, password) VALUES (:login, :password);";
+    $query = "INSERT INTO users (login, password) VALUES (?, ?);";
 
     $stmt = $db->prepare($query);
-    $stmt->bindParam(':login', $newUserLogin);
-    $stmt->bindParam(':password', $newUserPassword);
-    $stmt->execute();
+    $stmt->execute([$newUserLogin, $newUserPassword]);
 
     $db->query($query);
-
-
 }

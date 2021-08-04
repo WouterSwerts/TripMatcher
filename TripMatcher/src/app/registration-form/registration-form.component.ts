@@ -10,22 +10,23 @@ import { DatabaseService } from '../database.service';
   styleUrls: ['./registration-form.component.css']
 })
 export class RegistrationFormComponent implements OnInit {
+
+  constructor(public databank: DatabaseService) { }
+
+  ngOnInit(): void {
+  }
+
   registratieFormulier = new FormGroup({
     Rlogin: new FormControl(),
     Rpassword: new FormControl()
   })
 
   submitRegistration() {
-    this.databank.postItem({"login":"burcu", "password":"test"}).subscribe(result=>console.log(result));
-
-
+    this.databank.postItem({"login":this.registratieFormulier.controls.Rlogin.value, "password":this.registratieFormulier.controls.Rpassword.value}).subscribe(result=>console.log(result));
 
   }
 
 
-  constructor(public databank: DatabaseService) { }
 
-  ngOnInit(): void {
-  }
 
 }
