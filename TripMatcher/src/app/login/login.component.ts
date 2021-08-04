@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
     login: new FormControl(),
     password: new FormControl()
   })
-  apiposts: any;
+  apiLogin: any;
   ready = false;
 
   users = [];
@@ -21,27 +21,25 @@ export class LoginComponent implements OnInit {
   constructor(public databaseService: DatabaseService) { }
 
   ngOnInit(): void {
-    // this.loginFormulier = new FormGroup({
-    //   login: new FormControl(),
-    //   password: new FormControl()
-    // })
 
-    // this.databaseService.getItem("test").subscribe((data) => {
-    //   this.apiposts = data;
-    //   this.ready = true;
-    // })
-
-    // this.databaseService.getLijst().subscribe((data) => {
-    //   this.users = data;
-    // })
   }
+
+  loginUserInput = this.databaseService.getItem(this.loginFormulier.controls.login.value).subscribe((data) => {this.apiLogin = data;});
+  // loginUserInput2 = this.apiLogin.password;
+  test = "test";
 
   submitForm() {
     this.databaseService.getItem(this.loginFormulier.controls.login.value).subscribe((data) => {
-      this.apiposts = data;
+      this.apiLogin = data;
+
+      if (this.apiLogin.login == this.loginFormulier.controls.login.value && this.apiLogin.password == this.loginFormulier.controls.password.value) {
+        console.log("correct")
       this.ready = true;
+      } else {
+        console.log("fout");
+      }
     })
-    // alert("Gegevens ontvangen van " + this.loginFormulier.controls.login.value + " je wachtwoord is " + this.loginFormulier.controls.password.value);
   }
+
 
 }
