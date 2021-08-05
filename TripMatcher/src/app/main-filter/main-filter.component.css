@@ -1,0 +1,53 @@
+.mainFilter {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 50px;
+}
+
+.filterItems {
+   display: flex;
+   flex-direction: row;
+   align-content:flex-end;
+   justify-content: last baseline;
+}
+
+.filterBox {
+   width: 132px;
+   height: 132px;
+   background: #303030;
+   box-shadow: 10px 10px 0px #24B9E9;
+   margin: 30px;
+}
+
+.filterBox p {
+   color: #F2F2F2;
+   margin: 15px;
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 18px;
+   line-height: 22px;
+   
+}
+
+.filterBox:hover {
+   cursor: pointer;
+   
+}
+
+.filterTekst {
+   margin: 20px;
+}
+
+.filterTekst p{
+   color: #24B9E9;
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 1000;
+   font-size: 20px;
+   line-height: 24px;
+   text-align: center;
+   margin: 0;
+
+}
