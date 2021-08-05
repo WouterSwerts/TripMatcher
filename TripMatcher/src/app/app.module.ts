@@ -10,13 +10,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonalPageComponent } from './personal-page/personal-page.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PersonalPageComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    NavbarComponent,
+    HeroComponent
 
   ],
   imports: [
