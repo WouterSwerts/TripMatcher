@@ -1,7 +1,18 @@
 <div class="navBar">
-  <img src="assets/img/logo2.png" alt="logo">
+  <img src="assets/img/logo2.png" alt="logo" class="logo">
   <div class="navItems">
     <a routerLink="">Home</a>
+    <a routerLink="">Destinations</a>
+    <a routerLink="">Activities</a>
+    <a routerLink="">My <span class="blauwTrip">Trip</span>Matcher</a>
+  </div>
+</div>
+
+<div class="navBarMobile">
+  <img src="assets/img/logo2.png" alt="logo" class="logoMobile">
+  <img src="assets/img/mobileMenu.svg" alt="menu" class="menuHamburger" (click)="openMenu()">
+  <div class="navItemsMobile" *ngIf="openClose">
+    <img src="assets/img/mobileMenuWhite.svg" alt="menu" class="menuHamburgerOpen" (click)="closeMenu()">
     <a routerLink="">Destinations</a>
     <a routerLink="">Activities</a>
     <a routerLink="">My <span class="blauwTrip">Trip</span>Matcher</a>
