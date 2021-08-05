@@ -12,6 +12,8 @@ import { PersonalPageComponent } from './personal-page/personal-page.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
+import { MainFilterComponent } from './main-filter/main-filter.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +22,8 @@ import { HeroComponent } from './hero/hero.component';
     PersonalPageComponent,
     RegistrationFormComponent,
     NavbarComponent,
-    HeroComponent
-
+    HeroComponent,
+    MainFilterComponent
   ],
   imports: [
     BrowserModule,
