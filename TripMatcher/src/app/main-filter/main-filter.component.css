@@ -5,39 +5,8 @@
    margin-bottom: 50px;
 }
 
-.filterItems {
-   display: flex;
-   flex-direction: row;
-   align-content:flex-end;
-   justify-content: last baseline;
-}
-
-.filterBox {
-   width: 132px;
-   height: 132px;
-   background: #303030;
-   box-shadow: 10px 10px 0px #24B9E9;
-   margin: 30px;
-}
-
-.filterBox p {
-   color: #F2F2F2;
-   margin: 15px;
-   font-family: Inter;
-   font-style: normal;
-   font-weight: 800;
-   font-size: 18px;
-   line-height: 22px;
-   
-}
-
-.filterBox:hover {
-   cursor: pointer;
-   
-}
-
 .filterTekst {
-   margin: 20px;
+   margin: 40px;
 }
 
 .filterTekst p{
@@ -49,5 +18,59 @@
    line-height: 24px;
    text-align: center;
    margin: 0;
+
+}
+
+.filterItems {
+   display: flex;
+   flex-direction: row;
+   align-content:flex-end;
+   flex-wrap: wrap;
+}
+
+.filterBox {
+   width: 99px;
+   height: 99px;
+   background: #303030;
+   box-shadow: 10px 10px 0px #24B9E9;
+   margin: 12px;
+}
+
+.filterBox p {
+   color: #F2F2F2;
+   margin: 10px;
+   font-family: Inter;
+   font-style: normal;
+   font-weight: bold; 
+   font-size: 14px;
+   line-height: 17px;
+   
+}
+
+.filterBox:hover {
+   cursor: pointer;
+   
+}
+
+@media only screen and (min-width: 1080px) {
+
+.filterBox {
+   width: 132px;
+   height: 132px;
+   margin: 30px;
+}
+
+.filterBox p {
+   margin: 15px;
+   font-weight: 800;
+   font-size: 18px;
+   line-height: 22px;
+   
+}
+
+
+.filterTekst {
+   margin: 20px;
+}
 
 }

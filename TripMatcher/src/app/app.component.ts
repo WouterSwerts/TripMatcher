@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TripMatcher';
+
+  openClose = false;
+
+  openMenu() {
+    this.openClose = true;
+  }
+
+  closeMenu() {
+    console.log("testClose");
+    this.openClose = false;
+  }
 }
