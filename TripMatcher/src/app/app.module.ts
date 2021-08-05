@@ -13,6 +13,7 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
 import { MainFilterComponent } from './main-filter/main-filter.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MainFilterComponent } from './main-filter/main-filter.component';
     RegistrationFormComponent,
     NavbarComponent,
     HeroComponent,
-    MainFilterComponent
+    MainFilterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
