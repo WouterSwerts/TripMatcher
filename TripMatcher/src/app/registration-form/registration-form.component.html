@@ -1,9 +1,28 @@
-<form [formGroup]="registratieFormulier">
-  <label for="Rlogin">Login: </label>
-  <input type="text" name="Rlogin" id="Rlogin" required formControlName="Rlogin">
+<div>
+  <div class="registrationTitle">
+    <h3>Sign up</h3>
+    <p>And make a bucket list that fits you like a glove</p>
+  </div>
+  <div class="registrationForm">
+    <form [formGroup]="registratieFormulier">
+      <div class="formName formInput">
+        <label for="Rname">Name</label>
+        <input type="text" name="Rname" id="Rname" required formControlName="Rname">
+      </div>
+      <div class="formEmail formInput">
+        <label for="Rlogin">E-mail</label>
+        <input type="text" name="Rlogin" id="Rlogin" required formControlName="Rlogin">
+      </div>
+      <div class="formPassword formInput">
+        <label for="Rpassword">Password</label>
+        <input type="Rpassword" name="Rpassword" id="Rpassword" required formControlName="Rpassword">
 
-  <label for="Rpassword">Password: </label>
-  <input type="Rpassword" name="Rpassword" id="Rpassword" required formControlName="Rpassword">
+        <input type="button" value="Create an Account" (click)="submitRegistration()" class="button">
+      </div>
+    </form>
+  </div>
+  <div class="registrationFooter">
+    <p>Already have an account? <a routerlink="">Sign in</a></p>
+  </div>
 
-  <input type="button" value="Registreerf!" (click)="submitRegistration()">
-</form>
+</div>

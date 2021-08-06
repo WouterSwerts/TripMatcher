@@ -1,0 +1,70 @@
+.loginTitle h3 {
+   margin-top: 0;
+   margin-bottom: 0;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 36px;
+   line-height: 43px;
+   color: #303030;
+}
+
+.loginTitle p {
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 19px;
+   color: #303030;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+
+label {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14.3355px;
+   line-height: 17px;
+   color: #303030;
+   margin-bottom: 12px;
+}
+
+.loginForm {
+   margin-top: 50px;
+}
+
+input {
+   height: 44px;
+   /* width: 223px; */
+}
+
+.button {
+   margin-top: 20px;
+   width: 181px;
+   height: 47px;
+   background: #24B9E9;
+   border-radius: 7px;
+   border-style: none;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 14.5338px;
+   line-height: 18px;
+   text-align: center;
+   color: #FFFFFF;
+}
+
+.formInput {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+}
+
+a {
+   color: #24B9E9;
+}
+
+.loginPassword {
+   margin-top: 20px;
+}
