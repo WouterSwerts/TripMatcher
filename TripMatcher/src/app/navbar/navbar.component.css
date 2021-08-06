@@ -2,6 +2,10 @@
    display: none;
 }
 
+.shadow {
+   box-shadow: 0 6px 6px -4px rgba(0, 0, 0, 0.25);
+}
+
 .navItemsMobile {
    display: flex;
    flex-direction: column;
