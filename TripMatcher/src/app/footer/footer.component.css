@@ -74,24 +74,6 @@
    color: white;
 }
 
-.footerDisclaimer {
-   background: #303030;
-   height: 50px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-.footerDisclaimer p {
-   font-family: Inter;
-   font-style: normal;
-   font-weight: 500;
-   font-size: 13px;
-   line-height: 16px;
-   text-align: center;
-   color: #FFFFFF;
-}
-
 
 @media only screen and (min-width: 1080px) {
 .footer {

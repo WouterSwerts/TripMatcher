@@ -19,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 
 import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
-import { OverlayComponent } from './overlay/overlay.component'
+import { OverlayComponent } from './overlay/overlay.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component'
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { OverlayComponent } from './overlay/overlay.component'
     HeroComponent,
     MainFilterComponent,
     FooterComponent,
-    OverlayComponent
+    OverlayComponent,
+    DisclaimerComponent
   ],
   imports: [
     BrowserModule,

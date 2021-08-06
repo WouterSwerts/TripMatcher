@@ -1,0 +1,184 @@
+.profileHeader {
+   margin-top: 30px;
+   display: flex;
+   flex-direction: row;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+img {
+   border-radius: 50px;
+   width: 115px;
+   height: 115px;
+}
+
+.profileHeaderTitle {
+   margin-left: 20px;
+   margin-top: 20px;
+}
+
+.profileHeaderTitle h5{
+   font-style: normal;
+   font-weight: 800;
+   font-size: 22px;
+   line-height: 28px;
+   letter-spacing: -0.01em;
+   color: #303030;
+   margin: 0;
+}
+
+.profileHeaderTitle p {
+   font-style: normal;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+   color: #303030;
+   margin: 0;
+}
+
+.profileNavigation {
+   margin-top: 80px;
+   margin-left: 20px;
+   display: flex;
+   flex-direction: column;
+}
+
+.profileNavigation a {
+   margin-bottom: 15px;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 17px;
+   line-height: 21px;
+   color: #303030;
+   display: inline-block;
+}
+
+.profileNavigation a:active {
+   display: inline-block;
+   text-decoration: underline;
+   text-decoration-color: #24B9E9;
+   text-underline-offset: 5px;
+   text-decoration-thickness: 3px;
+}
+
+.profileContent {
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+
+
+
+.noContent {
+   position: absolute; 
+   padding: 10px;
+   height: 195px;
+   width: 100%;
+   background: #EAEAEA;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.noContent p {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 17px;
+}
+
+.blue {
+   color: #24B9E9;
+}
+
+@media only screen and (min-width: 1080px) {
+.profileHeader {
+   margin-top: 50px;
+   display: flex;
+   flex-direction: row;
+   padding-left: 150px;
+   padding-right: 150px;
+}
+
+.profileHeaderTitle {
+   margin-left: 70px;
+   margin-top: 0;
+   padding-top: 10px;
+}
+
+.profileHeaderTitle h5{
+   font-style: normal;
+   font-weight: 800;
+   font-size: 35px;
+   line-height: 42px;
+   letter-spacing: -0.01em;
+   color: #303030;
+   margin: 0;
+}
+
+.profileHeaderTitle p {
+   font-style: normal;
+   font-weight: 300;
+   font-size: 22px;
+   line-height: 27px;
+   color: #303030;
+   margin: 0;
+   margin-top: 10px;
+}
+
+
+
+img {
+   border-radius: 50px;
+   width: 240px;
+   height: 240px;
+}
+
+.profileNavigation {
+   margin-top: 80px;
+   margin-left: 150px;
+}
+
+.profileNavigation a {
+   font-style: normal;
+   font-weight: bold;
+   font-size: 22px;
+   line-height: 27px;
+   color: #303030;
+   margin-right: 90px;
+   display: inline-block;
+}
+
+.profileNavigation a:hover {
+   display: inline-block;
+   text-decoration: underline;
+   text-decoration-color: #24B9E9;
+   text-underline-offset: 5px;
+   text-decoration-thickness: 3px;
+}
+
+.profileContent {
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+
+.noContent {
+   position: absolute;
+   width: 1440px;
+   height: 195px;
+   background: #EAEAEA;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.noContent p {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 22px;
+   line-height: 27px;
+}
+
+.blue {
+   color: #24B9E9;
+}
+}
