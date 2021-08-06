@@ -129,4 +129,11 @@
    line-height: 31px;
 }
 
+.registrationForm {
+   display: flex;
+   position: static;
+   margin-bottom: -500px;
+
+}
+
 }
