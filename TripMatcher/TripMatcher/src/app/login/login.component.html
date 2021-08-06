@@ -1,0 +1,16 @@
+<form [formGroup]="loginFormulier">
+  <label for="login">Login: </label>
+  <input type="text" name="login" id="login" required formControlName="login">
+
+  <label for="password">Password: </label>
+  <input type="password" name="password" id="password" required formControlName="password">
+
+  <input type="button" value="Login!" (click)="submitForm()">
+</form>
+
+
+<p *ngIf="ready">{{apiLogin.login}}</p>
+
+<a *ngIf="loginCorrect" routerLink="personalPage"><button>Page</button></a>
+
+<router-outlet></router-outlet>

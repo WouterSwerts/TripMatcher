@@ -1,0 +1,109 @@
+.navBar {
+   display: none;
+}
+
+.navItemsMobile {
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   justify-content:flex-end;
+   width: 203px;
+   min-height: 198px;
+   background: #303030;
+   opacity: 0.8;
+   box-shadow: -5px 5px 0px #24B9E9;
+   padding-left: 25px;
+   padding-bottom: 40px;
+   position: absolute;
+   margin: 0;
+   right: 0px;
+   top: 0px;
+}
+
+.navBarMobile {
+   display: flex;
+   flex-direction: row;
+   
+   justify-content: space-between;
+   padding: 15px 30px 15px 30px;
+}
+
+.logoMobile {
+   width: 150px;
+}
+
+.menuHamburgerOpen {
+   color: white;
+}
+
+.navItemsMobile img {
+   width: 34px;
+   color: white;
+   margin-right: 30px;
+   align-self:flex-end;
+   justify-self: center;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+   font-size: 16px;
+   font-weight: 400;
+   margin-top: 30px;
+
+}
+
+.blauwTrip {
+   color: #24B9E9;
+
+}
+
+
+
+@media only screen and (min-width: 1080px) {
+
+a {
+   text-decoration: none;
+   color: black;
+   margin-left: 60px;
+   font-size: 16px;
+   font-weight: 400;
+
+}
+
+a:hover {
+   font-weight: bold;
+}
+
+
+.navBar {
+   width: auto;
+   display: flex;
+   justify-content:space-around;
+   flex-direction: row;
+   padding-bottom: 10px;
+   /* border: 1px solid black; */
+}
+
+.navItems {
+   padding-bottom: 5px;
+   align-items: flex-end;
+   justify-self: center;
+   display: flex;
+   flex-direction: row;
+}
+
+.blauwTrip {
+   color: #24B9E9;
+
+}
+
+.menuHamburger {
+   display: none;
+}
+
+.menuHamburgerOpen {
+   display: none;
+}
+
+}

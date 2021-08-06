@@ -1,0 +1,58 @@
+.activiteit{
+   display: flex;
+   width: 95vw;
+   height: 320px;
+   margin-bottom: 1rem;
+   background-color: lightgray;
+   position: relative;
+   }
+   
+   .afbeelding img{
+   height: 320px;
+   width: 60vw;
+   
+   }
+   
+   .titel{
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 1rem;
+      margin-top: 4rem;
+   }
+   
+   .tekst{
+   margin: 1rem;
+   font-size: 1rem;
+   width: 30vw;
+   
+   }
+   
+   .tagline{
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 1;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+   }
+   
+   .tag{
+   border: solid black 1px;
+   width: fit-content;
+   border-radius: 15px;
+   padding: 3px;
+   font-size: 13px;
+   margin: 0.5rem;
+   /* background: #24B9E9; */
+   box-shadow: black 4px 4px 4px ;
+   }
+    
+    .voor{
+     color: blue;
+     
+   }
+   
+   .na{
+      color: red;
+     
+   }

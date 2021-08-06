@@ -8,14 +8,26 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PersonalPageComponent } from './personal-page/personal-page.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HeroComponent } from './hero/hero.component';
+import { MainFilterComponent } from './main-filter/main-filter.component';
+import { FooterComponent } from './footer/footer.component';
 import { ActiviteitComponent } from './activiteit/activiteit.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    PersonalPageComponent,
+    RegistrationFormComponent,
+    NavbarComponent,
+    HeroComponent,
+    MainFilterComponent,
+    FooterComponent,
     ActiviteitComponent
-
   ],
   imports: [
     BrowserModule,
