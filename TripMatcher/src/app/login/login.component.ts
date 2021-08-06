@@ -3,6 +3,10 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 import { DatabaseService } from '../database.service';
 
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -44,6 +48,11 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+
+
+  // let dialogRef = dialog.open(YourDialog, {
+  //   data: { name: 'austin' },
+  // });
 
 
 }

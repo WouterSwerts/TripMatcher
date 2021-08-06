@@ -1,0 +1,36 @@
+.overlayBG {
+   background-color: rgba(0, 0, 0, .40);
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height:100%;
+   display: flex;
+   justify-content: center;
+}
+
+.overlayVak {
+   background-color: white;
+   width: 358px;
+   height: 719px;
+   border-radius: 35px;
+   margin: 50px auto;
+   position: fixed;
+}
+
+.overlayType {
+   padding: 60px;
+}
+
+
+@media only screen and (min-width: 1080px) {
+
+.overlayVak {
+   width: 607px;
+   height: 607px;
+}
+
+}
+

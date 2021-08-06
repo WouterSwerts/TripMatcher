@@ -50,17 +50,19 @@ a {
    font-size: 16px;
    font-weight: 400;
    margin-top: 30px;
-
 }
 
 .blauwTrip {
    color: #24B9E9;
-
 }
 
 
 
 @media only screen and (min-width: 1080px) {
+
+.navBarMobile {
+   display: none;
+}
 
 a {
    text-decoration: none;
@@ -68,7 +70,6 @@ a {
    margin-left: 60px;
    font-size: 16px;
    font-weight: 400;
-
 }
 
 a:hover {
