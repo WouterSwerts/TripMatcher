@@ -8,24 +8,26 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 
 require "dataPost.php"; // DATABANK
 
-if(isset($_POST['login']))
+if(isset($_POST['email']))
 {
-  $naam = $_POST['login'];
+  $name = $_POST['name'];
+  $email = $_POST['email'];
   $password = $_POST['password'];
-  addUser($naam, $password);
-  response(200, "Posted Data", $naam, $password);
+  addUser($name, $email, $password);
+  response(200, "Posted Data", $name, $email, $password);
 }
 else {
-  response(200, "Data Send", NULL, NULL);
+  response(200, "Data Send", NULL, NULL, NULL);
 }
 //* Onze functie om de response te versturen via HTTP in JSON formaat
-function response($statuscode, $message, $userName, $password){
+function response($statuscode, $message, $userName, $userEmail, $password){
 
   header("HTTP/1.1 ".$statuscode);
 
   $response["status"] = $statuscode;
   $response["message"] = $message;
-  $response["login"] = $userName;
+  $response["name"] = $userName;
+  $response["email"] = $userEmail;
   $response["password"] = $password;
 
   $json_response = json_encode($response);

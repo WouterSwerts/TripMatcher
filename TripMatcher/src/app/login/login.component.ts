@@ -14,8 +14,8 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class LoginComponent implements OnInit {
   loginFormulier = new FormGroup({
-    login: new FormControl(),
-    password: new FormControl()
+    Lemail: new FormControl(),
+    Lpassword: new FormControl()
   })
   apiLogin: any;
   ready = false;
@@ -30,20 +30,24 @@ export class LoginComponent implements OnInit {
 
   }
 
-  loginUserInput = this.databaseService.getItem(this.loginFormulier.controls.login.value).subscribe((data) => {this.apiLogin = data;});
+  loginUserInput = this.databaseService.getItem(this.loginFormulier.controls.Lemail.value).subscribe((data) => {this.apiLogin = data;});
   // loginUserInput2 = this.apiLogin.password;
   test = "test";
 
   submitForm() {
-    this.databaseService.getItem(this.loginFormulier.controls.login.value).subscribe((data) => {
+    this.databaseService.getItem(this.loginFormulier.controls.Lemail.value).subscribe((data) => {
       this.apiLogin = data;
 
-      if (this.apiLogin.login == this.loginFormulier.controls.login.value && this.apiLogin.password == this.loginFormulier.controls.password.value) {
-        // console.log("correct");
+      if (this.apiLogin.email == this.loginFormulier.controls.Lemail.value && this.apiLogin.password == this.loginFormulier.controls.Lpassword.value) {
+        // console.log("correct!! GVD");
+        // console.log("api: "+this.apiLogin.password);
+        // console.log("form: "+this.loginFormulier.controls.Lpassword.value);
         this.loginCorrect = true;
         this.ready = true;
       } else {
-        console.log("fout");
+        // console.log("fout");
+        // console.log("api: "+this.apiLogin.password);
+        // console.log("form: "+this.loginFormulier.controls.Lpassword.value);
         this.loginCorrect = false;
       }
     })
