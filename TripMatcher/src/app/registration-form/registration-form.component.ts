@@ -17,12 +17,13 @@ export class RegistrationFormComponent implements OnInit {
   }
 
   registratieFormulier = new FormGroup({
-    Rlogin: new FormControl(),
+    Rname: new FormControl(),
+    Remail: new FormControl(),
     Rpassword: new FormControl()
   })
 
   submitRegistration() {
-    this.databank.postItem({"login":this.registratieFormulier.controls.Rlogin.value, "password":this.registratieFormulier.controls.Rpassword.value}).subscribe(result=>console.log(result));
+    this.databank.postItem({"name":this.registratieFormulier.controls.Rname.value,"email":this.registratieFormulier.controls.Remail.value, "password":this.registratieFormulier.controls.Rpassword.value}).subscribe(result=>console.log(result));
 
   }
 

@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.apiLogin = data;
 
       if (this.apiLogin.login == this.loginFormulier.controls.login.value && this.apiLogin.password == this.loginFormulier.controls.password.value) {
-        console.log("correct");
+        // console.log("correct");
         this.loginCorrect = true;
         this.ready = true;
       } else {
