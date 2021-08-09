@@ -1,10 +1,21 @@
 <div class="container">
   <app-navbar></app-navbar>
-  <!-- <app-personal-page></app-personal-page> -->
-  <app-hero></app-hero>
-  <app-main-filter></app-main-filter>
 
-  <app-footer></app-footer>
+  <div class="personalPage" *ngIf="personalPage.displayPersonalPage">
+    <app-personal-page></app-personal-page>
+  </div>
+
+  <div class="heroPage" *ngIf="personalPage.displayHomePage">
+    <app-hero></app-hero>
+  </div>
+
+  <div class="filter" *ngIf="personalPage.displayHomePage">
+    <app-main-filter></app-main-filter>
+  </div>
+
+  <div class="footer" *ngIf="personalPage.displayHomePage">
+    <app-footer></app-footer>
+  </div>
   <app-disclaimer></app-disclaimer>
 </div>
 
