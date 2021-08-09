@@ -23,7 +23,7 @@ function jsonresponse($statuscode, $message, $userName, $userID, $password) {
 
   $response["status"] = $statuscode;
   $response["message"] = $message;
-  $response["login"] = $userName;
+  $response["email"] = $userName;
   $response["id"] = $userID;
   $response["password"] = $password;
 
