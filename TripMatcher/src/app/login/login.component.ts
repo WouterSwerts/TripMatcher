@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         
         this.overlay.closeOverlay();
 
-        this.topersonalpage.test();
+        this.topersonalpage.toPersonalPage();
         
       } else {
         console.log("fout");
