@@ -3,15 +3,25 @@
    width: 95vw;
    height: 320px;
    margin-bottom: 1rem;
-   background-color: lightgray;
+   background-color: #EAEAEA;
    position: relative;
    }
    
    .afbeelding img{
-   height: 320px;
-   width: 60vw;
-   
+   height: 310px;
+   width: 960px;
    }
+
+   
+   
+    
+    .like {
+      position: absolute;
+      left: 59vw;
+      top: 10px;
+      z-index: 100;
+    }
+
    
    .titel{
       font-weight: bold;
@@ -22,7 +32,10 @@
    
    .tekst{
    margin: 1rem;
-   font-size: 1rem;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 19px;
    width: 30vw;
    
    }
@@ -43,16 +56,16 @@
    padding: 3px;
    font-size: 13px;
    margin: 0.5rem;
-   /* background: #24B9E9; */
-   box-shadow: black 4px 4px 4px ;
+  
+   /* box-shadow: black 4px 4px 4px ; */
    }
     
-    .voor{
-     color: blue;
-     
+     .voor{
+      background-image: url(/assets/img/Hart.svg) ;
+     background-repeat: no-repeat;
    }
    
-   .na{
-      color: red;
-     
+   .favo{
+      background-image: url(/assets/img/Hart2.svg) ;
+     background-repeat: no-repeat;
    }

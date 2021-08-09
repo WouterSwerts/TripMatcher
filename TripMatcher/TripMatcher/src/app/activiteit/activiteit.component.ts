@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ActiviteitComponent implements OnInit {
 statusClass = "voor";
 
-veranderKleur(){
-  this.statusClass = "na";
+favo(){
+  this.statusClass = "favo";
 }
+
   constructor() { }
 
   ngOnInit(): void {

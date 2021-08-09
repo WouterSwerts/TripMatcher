@@ -1,15 +1,17 @@
 <div class="activiteit">
-  <div class="afbeelding"><img src="/assets/img/TODI4.jpg" alt="Todi">
-
+  <div>
+    <div class="afbeelding"><img src="/assets/img/TODI4.jpg" alt="Todi"></div>
+    <div (click)="favo()" [ngClass]="statusClass" class="like"><img src="/assets/img/Hart.svg" alt="hart">
+    </div>
   </div>
   <div>
     <div class="titel">De onderwaterwereld van Todi Beringen</div>
 
-    <div class="tekst">Als je denkt aan duiken, snorkelen of apneuduiken, dan droom je meestal van helder warm water,
-      kleurrijke fauna en flora en een overvloed aan speciale vissen. Toch? Dat bestaat nu ook in België. TODI
+    <div class="tekst">Als je denkt aan duiken, dan droom je meestal van kleurrijke fauna en flora en een overvloed aan
+      speciale vissen. Toch? Dat bestaat nu ook in België. TODI
       creëerde in
       Beringen een unieke ervaring waarbij bezoekers actief en emotioneel betrokken raken. Kortom, de ultieme
-      duikbeleving! We nodigen je graag uit in onze wonderbaarlijke onderwaterwereld.
+      duikbeleving!
     </div>
 
     <div class="tagline">
@@ -17,7 +19,8 @@
       <div class="tag"> Belgie</div>
       <div class="tag"> Indoor</div>
       <div class="tag"> Adventure</div>
-      <div (click)="veranderKleur()" [ngClass]="statusClass">LIKE</div>
+
+      <!-- <div (click)="veranderKleur()" [ngClass]="statusClass">LIKE</div> -->
     </div>
 
   </div>
@@ -30,9 +33,7 @@
     <div class="titel">Fietsen door het water</div>
     <div class="tekst">Een unieke fietsbeleving waarbij je meer dan 200 meter dwars door
       een
-      vijver fietst. Het fietspad werd geopend in april 2016 en sindsdien hebben al veel fietsers en wandelaars de magie
-      van deze plek gevoeld.
-      Het fietspad leidt je dwars door een vijver, helemaal van de ene oever tot aan de andere. In het midden staat het
+      vijver fietst. In het midden staat het
       water aan weerszijden op ooghoogte. Je voelt, ziet en ruikt het water. Een mooi en uniek zicht over dit stukje
       natuur. Ook al heet het 'Fietsen door het Water', het pad is toegankelijk voor wandelaars en joggers.
     </div>
@@ -197,7 +198,7 @@
   </div>
 </div>
 <div class="activiteit">
-  <div class="afbeelding"><img src="/assets/img/pizzafest.png" alt="Pizzafest"></div>
+  <div class="afbeelding"><img src="/assets/img/pizzafest2.jpg" alt="Pizzafest"></div>
   <div class="tekst">Zin in Pizza? Dan is <b>Pizzafest</b> in Napels the place to be! Hier verzamelen de inwoners zich
     ieder
     jaar om meer dan 100.000 pizzas te maken en te delen met alle pizza lovers van Italie en ver daar buiten. Ga je voor
