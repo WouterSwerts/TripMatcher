@@ -1,21 +1,20 @@
 import { Component } from '@angular/core';
+import { OpenOverlayService } from './open-overlay.service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  implements OnInit {
+
   title = 'TripMatcher';
 
-  openClose = false;
+  constructor(public openOverlay: OpenOverlayService) {};
 
-  openMenu() {
-    this.openClose = true;
+  ngOnInit(): void {
+    this.openOverlay.overlayDisplay;
   }
 
-  closeMenu() {
-    console.log("testClose");
-    this.openClose = false;
-  }
 }

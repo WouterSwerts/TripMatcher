@@ -21,9 +21,21 @@
 }
 
 .overlayType {
+   margin-top: -20px;
    padding: 60px;
 }
 
+img {
+   width: 40px;
+   text-align: right;
+   margin-right: 20px;
+   margin-top: 20px;
+}
+
+.closetag {
+   display: flex;
+   justify-content: flex-end;
+}
 
 @media only screen and (min-width: 1080px) {
 
