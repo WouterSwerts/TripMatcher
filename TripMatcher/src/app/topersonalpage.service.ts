@@ -11,8 +11,7 @@ export class TopersonalpageService {
   displayHomePage = true;
   displayPersonalPage = false;
 
-  test() {
-    console.log("gelukt");
+  toPersonalPage() {
     this.router.navigate(['personalPage'])
     this.displayHomePage = false;
     this.displayPersonalPage = true;

@@ -1,23 +1,11 @@
 <div class="container">
+
   <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
 
-  <div class="personalPage" *ngIf="personalPage.displayPersonalPage">
-    <app-personal-page></app-personal-page>
-  </div>
-
-  <div class="heroPage" *ngIf="personalPage.displayHomePage">
-    <app-hero></app-hero>
-  </div>
-
-  <div class="filter" *ngIf="personalPage.displayHomePage">
-    <app-main-filter></app-main-filter>
-  </div>
-
-  <div class="footer" *ngIf="personalPage.displayHomePage">
-    <app-footer></app-footer>
-  </div>
-  <app-disclaimer></app-disclaimer>
 </div>
+
+<app-disclaimer></app-disclaimer>
 
 <div id="overlay" *ngIf="openOverlay.overlayDisplay">
   <app-overlay></app-overlay>
