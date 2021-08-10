@@ -10,7 +10,7 @@ $db = new PDO("mysql:host=$dbHostname; dbname=$dbDatabank", "$dbUsername", "$dbP
 function addUser($newUserName,$newUserEmail, $newUserPassword) {
     global $db;
 
-    $query = "INSERT INTO users (name, email, password) VALUES (?, ?, ?);";
+    $query = "INSERT INTO tripmatcher.usertable (name, email, password) VALUES (?, ?, ?);";
 
     $stmt = $db->prepare($query);
     $stmt->execute([$newUserName,$newUserEmail, $newUserPassword]);
