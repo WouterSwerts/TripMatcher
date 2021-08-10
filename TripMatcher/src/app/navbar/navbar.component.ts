@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CredentialsService } from '../credentials.service';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,7 +13,7 @@ export class NavbarComponent implements OnInit {
 
   openClose = false;
 
-  constructor() { }
+  constructor(public credentials: CredentialsService) { }
 
   ngOnInit(): void {
   }
@@ -24,5 +26,7 @@ export class NavbarComponent implements OnInit {
     console.log("testClose");
     this.openClose = false;
   }
+
+  userName = this.credentials.userName;
 
 }

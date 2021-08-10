@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CredentialsService } from '../credentials.service';
 
 @Component({
   selector: 'app-personal-page',
@@ -11,9 +12,12 @@ export class PersonalPageComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(public credentials: CredentialsService) { }
 
   ngOnInit(): void {
   }
+
+  userEmail = this.credentials.userEmail;
+  userName = this.credentials.userName;
 
 }

@@ -23,6 +23,8 @@ export class LoginComponent implements OnInit {
 
   users = [];
 
+  userEmail = sessionStorage.getItem('userEmail');
+
   constructor(public databaseService: DatabaseService, public topersonalpage: TopersonalpageService, public overlay: OverlayComponent) { }
 
   ngOnInit(): void {
@@ -36,7 +38,8 @@ export class LoginComponent implements OnInit {
       if (this.apiLogin.email == this.loginFormulier.controls.Lemail.value && this.apiLogin.password == this.loginFormulier.controls.Lpassword.value) {
         
         this.overlay.closeOverlay();
-
+        localStorage.setItem('userEmail', this.apiLogin.email);
+        localStorage.setItem('userName', this.apiLogin.name);
         this.topersonalpage.toPersonalPage();
         
       } else {
