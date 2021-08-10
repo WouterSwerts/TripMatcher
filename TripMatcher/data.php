@@ -9,25 +9,25 @@ $dbDatabank = "tripmatcher";
 $db = new PDO("mysql:host=$dbHostname; dbname=$dbDatabank", "$dbUsername", "$dbPassword");
 
 
-function sessionID($user) {
-  global $db;
-
-  $query = "SELECT * FROM users WHERE login=:user;";
-
-  $stmt = $db->prepare($query);
-  $stmt->bindParam(':user', $user);
-  $stmt->execute();
-
-  $resultaat = $stmt->fetchColumn(0);
-
-
-  return $resultaat;
-}
+//function sessionID($user) {
+//  global $db;
+//
+//  $query = "SELECT * FROM users WHERE login=:user;";
+//
+//  $stmt = $db->prepare($query);
+//  $stmt->bindParam(':user', $user);
+//  $stmt->execute();
+//
+//  $resultaat = $stmt->fetchColumn(0);
+//
+//
+//  return $resultaat;
+//}
 
 function userOpvragen($user) {
   global $db;
 
-  $query = "SELECT * FROM users WHERE login=:user;";
+  $query = "SELECT * FROM users WHERE email=:user;";
 
   $stmt = $db->prepare($query);
   $stmt->bindParam(':user', $user);
@@ -35,7 +35,7 @@ function userOpvragen($user) {
 
   $resultaat = $stmt->fetchColumn();
 
-  $_SESSION["id"] = sessionID($user);
+//  $_SESSION["id"] = sessionID($user);
 
   return $resultaat;
 
@@ -44,15 +44,15 @@ function userOpvragen($user) {
 function passwordOpvragen($user) {
   global $db;
 
-  $query = "SELECT * FROM users WHERE login=:user;";
+  $query = "SELECT * FROM users WHERE email=:user;";
 
   $stmt = $db->prepare($query);
   $stmt->bindParam(':user', $user);
   $stmt->execute();
 
-  $resultaat = $stmt->fetchColumn(2);
+  $resultaat = $stmt->fetchColumn(3);
 
-  $_SESSION["id"] = sessionID($user);
+//  $_SESSION["id"] = sessionID($user);
 
   return $resultaat;
 }

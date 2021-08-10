@@ -3,7 +3,9 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 import { DatabaseService } from '../database.service';
 
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { TopersonalpageService } from '../topersonalpage.service';
+
+import { OverlayComponent } from '../overlay/overlay.component';
 
 
 
@@ -14,45 +16,33 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class LoginComponent implements OnInit {
   loginFormulier = new FormGroup({
-    login: new FormControl(),
-    password: new FormControl()
+    Lemail: new FormControl(),
+    Lpassword: new FormControl()
   })
   apiLogin: any;
-  ready = false;
-
-  loginCorrect = false;
 
   users = [];
 
-  constructor(public databaseService: DatabaseService) { }
+  constructor(public databaseService: DatabaseService, public topersonalpage: TopersonalpageService, public overlay: OverlayComponent) { }
 
   ngOnInit(): void {
 
   }
 
-  loginUserInput = this.databaseService.getItem(this.loginFormulier.controls.login.value).subscribe((data) => {this.apiLogin = data;});
-  // loginUserInput2 = this.apiLogin.password;
-  test = "test";
-
   submitForm() {
-    this.databaseService.getItem(this.loginFormulier.controls.login.value).subscribe((data) => {
+    this.databaseService.getItem(this.loginFormulier.controls.Lemail.value).subscribe((data) => {
       this.apiLogin = data;
 
-      if (this.apiLogin.login == this.loginFormulier.controls.login.value && this.apiLogin.password == this.loginFormulier.controls.password.value) {
-        // console.log("correct");
-        this.loginCorrect = true;
-        this.ready = true;
+      if (this.apiLogin.email == this.loginFormulier.controls.Lemail.value && this.apiLogin.password == this.loginFormulier.controls.Lpassword.value) {
+        
+        this.overlay.closeOverlay();
+
+        this.topersonalpage.toPersonalPage();
+        
       } else {
         console.log("fout");
-        this.loginCorrect = false;
       }
     })
   }
-
-
-  // let dialogRef = dialog.open(YourDialog, {
-  //   data: { name: 'austin' },
-  // });
-
 
 }

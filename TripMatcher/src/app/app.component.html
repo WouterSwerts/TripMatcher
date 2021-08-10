@@ -1,12 +1,12 @@
 <div class="container">
-  <app-navbar></app-navbar>
-  <!-- <app-personal-page></app-personal-page> -->
-  <app-hero></app-hero>
-  <app-main-filter></app-main-filter>
 
-  <app-footer></app-footer>
-  <app-disclaimer></app-disclaimer>
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+
 </div>
 
+<app-disclaimer></app-disclaimer>
 
-<!-- <app-overlay></app-overlay> -->
+<div id="overlay" *ngIf="openOverlay.overlayDisplay">
+  <app-overlay></app-overlay>
+</div>

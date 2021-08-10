@@ -1,21 +1,27 @@
 import { Component } from '@angular/core';
+import { OpenOverlayService } from './open-overlay.service';
+import { OnInit } from '@angular/core';
+import { TopersonalpageService } from './topersonalpage.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  implements OnInit {
+
   title = 'TripMatcher';
 
-  openClose = false;
+  constructor(public openOverlay: OpenOverlayService, public personalPage: TopersonalpageService) {};
 
-  openMenu() {
-    this.openClose = true;
+  ngOnInit(): void {
+    this.openOverlay.overlayDisplay;
+
+    this.personalPage.displayHomePage;
+    this.personalPage.displayPersonalPage;
+
   }
 
-  closeMenu() {
-    console.log("testClose");
-    this.openClose = false;
-  }
+  
+
 }

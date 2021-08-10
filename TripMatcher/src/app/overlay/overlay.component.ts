@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OpenOverlayService } from '../open-overlay.service';
 
 @Component({
   selector: 'app-overlay',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverlayComponent implements OnInit {
 
-  constructor() { }
+  constructor(public overlayService: OpenOverlayService) { }
+
+  closeOverlay() {
+    this.overlayService.overlayDisplay = false;
+  }
+
+
 
   ngOnInit(): void {
   }
