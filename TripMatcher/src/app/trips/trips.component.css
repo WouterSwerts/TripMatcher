@@ -1,0 +1,75 @@
+
+@media only screen and (min-width: 1080px) {
+.activiteit{
+   display: flex;
+   /* height: 320px; */
+   margin-bottom: 1rem;
+   background-color: #EAEAEA;
+   position: relative;
+   }
+
+.tripImage {
+   flex-grow: 2;
+}
+
+.tripContent {
+   flex-grow: 1;
+}
+   
+.afbeelding img{
+   height: 320px;
+   }
+    
+.like {
+      position: absolute;
+      left: 900px;
+      top: 10px;
+      z-index: 100;
+    }
+
+   
+h3{
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 1rem;
+      margin-top: 4rem;
+   }
+   
+.tekst{
+   margin: 1rem;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 19px;
+   }
+   
+.tagline{
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 1;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+   }
+   
+.tag{
+   border: solid black 1px;
+   width: max-content;
+   border-radius: 15px;
+   padding: 3px 10px;
+   font-size: 13px;
+   margin: 0.5rem;
+  
+   /* box-shadow: black 4px 4px 4px ; */
+   }
+    
+.voor{
+      background-image: url(/assets/img/Hart.svg) ;
+     background-repeat: no-repeat;
+   }
+   
+.favo{
+      background-image: url(/assets/img/Hart2.svg) ;
+     background-repeat: no-repeat;
+   }
+}

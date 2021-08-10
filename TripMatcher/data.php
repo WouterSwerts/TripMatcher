@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $dbUsername = "root";
 $dbPassword = "";
@@ -8,21 +7,6 @@ $dbDatabank = "tripmatcher";
 
 $db = new PDO("mysql:host=$dbHostname; dbname=$dbDatabank", "$dbUsername", "$dbPassword");
 
-
-//function sessionID($user) {
-//  global $db;
-//
-//  $query = "SELECT * FROM users WHERE login=:user;";
-//
-//  $stmt = $db->prepare($query);
-//  $stmt->bindParam(':user', $user);
-//  $stmt->execute();
-//
-//  $resultaat = $stmt->fetchColumn(0);
-//
-//
-//  return $resultaat;
-//}
 
 function userOpvragen($user) {
   global $db;
@@ -52,13 +36,7 @@ function passwordOpvragen($user) {
 
   $resultaat = $stmt->fetchColumn(3);
 
-//  $_SESSION["id"] = sessionID($user);
-
   return $resultaat;
 }
-
-
-
-//echo userOpvragen("test");
 
 
