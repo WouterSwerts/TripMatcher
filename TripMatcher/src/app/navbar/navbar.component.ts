@@ -11,11 +11,14 @@ export class NavbarComponent implements OnInit {
 
   menu: any;
 
+  userName: any;
+
   openClose = false;
 
   constructor(public credentials: CredentialsService) { }
 
   ngOnInit(): void {
+    this.userName = this.credentials.userName;
   }
 
   openMenu() {
@@ -27,6 +30,5 @@ export class NavbarComponent implements OnInit {
     this.openClose = false;
   }
 
-  userName = this.credentials.userName;
 
 }
