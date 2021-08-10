@@ -11,7 +11,6 @@ statusClass = "voor";
 favo(){
   this.statusClass = "favo";
 }
-
   constructor() { }
 
   ngOnInit(): void {
