@@ -21,7 +21,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import { OverlayComponent } from './overlay/overlay.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
-import { HomepageComponent } from './homepage/homepage.component'
+import { HomepageComponent } from './homepage/homepage.component';
+import { TripsComponent } from './trips/trips.component'
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { HomepageComponent } from './homepage/homepage.component'
     FooterComponent,
     OverlayComponent,
     DisclaimerComponent,
-    HomepageComponent
+    HomepageComponent,
+    TripsComponent
   ],
   imports: [
     BrowserModule,
