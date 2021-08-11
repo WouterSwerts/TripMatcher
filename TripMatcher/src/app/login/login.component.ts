@@ -38,8 +38,8 @@ export class LoginComponent implements OnInit {
       if (this.apiLogin.email == this.loginFormulier.controls.Lemail.value && this.apiLogin.password == this.loginFormulier.controls.Lpassword.value) {
         
         this.overlay.closeOverlay();
-        localStorage.setItem('userEmail', this.apiLogin.email);
-        localStorage.setItem('userName', this.apiLogin.name);
+        sessionStorage.setItem('userEmail', this.apiLogin.email);
+        sessionStorage.setItem('userName', this.apiLogin.name);
         this.topersonalpage.toPersonalPage();
         
       } else {

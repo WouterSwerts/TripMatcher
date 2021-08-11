@@ -1,12 +1,34 @@
 <div class="navBar shadow">
   <img src="assets/img/logo2.png" alt="logo" class="logo">
   <div class="navItems">
-    <a routerLink="">Home</a>
-    <a routerLink="">Destinations</a>
-    <a routerLink="">Activities</a>
-    <a routerLink="">{{userName}}'s <span class="blauwTrip">Trip</span>Matcher</a>
+    <div class="menuItem">
+      <a routerLink="">Home</a>
+    </div>
+    <div class="menuItem">
+      <a routerLink="">Destinations</a>
+    </div>
+    <div class="menuItem">
+      <a routerLink="">Activities</a>
+    </div>
+    <div class="menuItem">
+      <a (click)="openNavBarPersonal()">
+        <!-- <a routerLink="PersonalPage"> -->
+        <div *ngIf="userName == undefined">My <span class="blauwTrip">Trip</span>Matcher</div>
+        <div *ngIf="userName != undefined">{{userName}}'s <span class="blauwTrip">Trip</span>Matcher</div>
+      </a>
+      <div class="navBarPersonal" *ngIf="openNavBarPersonalDisplay">
+        <div>
+          <p (click)="openSettings()">Account Settings</p>
+          <p (click)="signOut()">Sign Out</p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
+
 </div>
+
 
 <div class="navBarMobile">
   <img src="assets/img/logo2.png" alt="logo" class="logoMobile">

@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 import { CredentialsService } from '../credentials.service';
 
+import { OpenOverlayService } from '../open-overlay.service';
+
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -15,10 +19,12 @@ export class NavbarComponent implements OnInit {
 
   openClose = false;
 
-  constructor(public credentials: CredentialsService) { }
+  openNavBarPersonalDisplay = false;
+
+  constructor(public credentials: CredentialsService, public openOverlay: OpenOverlayService, public router: Router) { }
 
   ngOnInit(): void {
-    this.userName = this.credentials.userName;
+    this.userName = sessionStorage.getItem('userName');
   }
 
   openMenu() {
@@ -29,6 +35,23 @@ export class NavbarComponent implements OnInit {
     console.log("testClose");
     this.openClose = false;
   }
+
+  openSettings() {
+    this.openOverlay.changeOverlayDisplay();
+    this.openNavBarPersonalDisplay = false;
+  };
+
+  openNavBarPersonal() {
+    this.openNavBarPersonalDisplay =! this.openNavBarPersonalDisplay;
+  };
+
+  signOut() {
+    sessionStorage.clear();
+    this.router.navigate([""]);
+    this.openNavBarPersonalDisplay = false;
+  }
+
+
 
 
 }
