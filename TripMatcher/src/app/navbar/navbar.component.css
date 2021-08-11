@@ -71,9 +71,13 @@ a {
 a {
    text-decoration: none;
    color: black;
-   margin-left: 60px;
+   
    font-size: 16px;
    font-weight: 400;
+}
+
+.menuItem {
+   margin-left: 60px;
 }
 
 a:hover {
@@ -109,6 +113,23 @@ a:hover {
 
 .menuHamburgerOpen {
    display: none;
+}
+
+.navBarPersonal {
+   position: absolute;
+   background: #303030;
+   opacity: 0.8;
+   box-shadow: 5px 5px 0px #24B9E9;
+   padding: 10px 20px;
+}
+
+.navBarPersonal p {
+   color: white;
+}
+
+.navBarPersonal p:hover {
+   color: white;
+   font-weight: bold;
 }
 
 }

@@ -7,6 +7,6 @@ export class CredentialsService {
 
   constructor() { }
 
-  userEmail = localStorage.getItem('userEmail');
-  userName = localStorage.getItem('userName');
+  userEmail = sessionStorage.getItem('userEmail');
+  userName = sessionStorage.getItem('userName');
 }
