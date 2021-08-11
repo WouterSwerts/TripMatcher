@@ -12,8 +12,12 @@ export class DatabaseService {
   registrationUrl = "http://localhost/TripMatcher/TripMatcher/apiPost.php";
   tripsUrl = "http://localhost/TripMatcher/TripMatcher/apiTrips.php";
   tagsUrl = "http://localhost/TripMatcher/TripMatcher/apiTags.php";
+  tripsCountryUrl = "http://localhost/TripMatcher/TripMatcher/apiTripCountry.php";
 
   constructor(private http: HttpClient) { }
+
+  belgium = "";
+
 
   getItem(login: string): Observable<any> {
     return this.http.get(`${this.baseUrl}?user=${login}`);
@@ -30,4 +34,12 @@ export class DatabaseService {
   getTags(id: any): Observable <any> {
     return this.http.get(`${this.tagsUrl}?trip_id=${id}`);
   }
+
+  getTripsCountry(country: string): Observable <any> {
+    return this.http.get(`${this.tripsCountryUrl}?countryName=${country}`)
+  }
+
+
+
+
 }

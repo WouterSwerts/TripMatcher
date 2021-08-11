@@ -6,6 +6,10 @@ import { OpenOverlayService } from '../open-overlay.service';
 
 import { Router } from '@angular/router';
 
+import { DatabaseService } from '../database.service';
+
+import { TripsComponent } from '../trips/trips.component';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -21,10 +25,14 @@ export class NavbarComponent implements OnInit {
 
   openNavBarPersonalDisplay = false;
 
-  constructor(public credentials: CredentialsService, public openOverlay: OpenOverlayService, public router: Router) { }
+  constructor(public credentials: CredentialsService, public openOverlay: OpenOverlayService, public router: Router, public database: DatabaseService) { }
+
+  Belgium = "Belgium";
 
   ngOnInit(): void {
     this.userName = sessionStorage.getItem('userName');
+
+    
   }
 
   openMenu() {
@@ -50,6 +58,11 @@ export class NavbarComponent implements OnInit {
     this.router.navigate([""]);
     this.openNavBarPersonalDisplay = false;
   }
+
+  filterCountry(){
+    this.database.belgium = "italy";
+    console.log(this.database.belgium);
+  };
 
 
 

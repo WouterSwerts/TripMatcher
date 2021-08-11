@@ -15,12 +15,17 @@ export class TripsComponent implements OnInit {
 
   // id = this.item;
 
-
+  filter = "belgium";
 
   constructor(public database: DatabaseService) { }
 
+
   ngOnInit(): void {
-    this.database.getTrips().subscribe((data) => {
+    // this.database.getTrips().subscribe((data) => {
+    //   this.apiTrip = data;
+    // })
+
+    this.database.getTripsCountry(this.filter).subscribe((data) => {
       this.apiTrip = data;
     })
 
@@ -38,7 +43,21 @@ export class TripsComponent implements OnInit {
   //   })
   // }
 
+  filterMe() {
 
+    this.filter = "germany";
+
+    this.database.getTripsCountry(this.filter).subscribe((data) => {
+      this.apiTrip = data;
+    })
+
+  }
+
+  filterIt(country: any) {
+    this.database.getTripsCountry(country).subscribe((data) => {
+      this.apiTrip = data;
+    })
+  }
 
 
 
