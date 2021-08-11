@@ -22,7 +22,8 @@ import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dia
 import { OverlayComponent } from './overlay/overlay.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { TripsComponent } from './trips/trips.component'
+import { TripsComponent } from './trips/trips.component';
+import { ChangeAccountComponent } from './change-account/change-account.component'
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { TripsComponent } from './trips/trips.component'
     OverlayComponent,
     DisclaimerComponent,
     HomepageComponent,
-    TripsComponent
+    TripsComponent,
+    ChangeAccountComponent
   ],
   imports: [
     BrowserModule,

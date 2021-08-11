@@ -1,0 +1,67 @@
+.changeAccount {
+   margin-top: 0;
+}
+
+.title h3 {
+   margin-top: 0;
+   margin-bottom: 0;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 36px;
+   line-height: 43px;
+   color: #303030;
+}
+
+.title p {
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 19px;
+   color: #303030;
+}
+
+.profileImage {
+   display: flex;
+   align-items: baseline;
+}
+
+img {
+   width: 150px;
+   margin: 0;
+}
+
+.profileImage button {
+   background-color: #303030;
+   border-radius: 15px;
+   border-style: none;
+   padding: 10px;
+   color: white;
+   font-weight: bold;
+   font-size: 12.4462px;
+   line-height: 15px;
+}
+
+.profileDetails {
+   margin-top: 10px;
+
+}
+
+label {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14.3355px;
+   line-height: 17px;
+   color: #303030;
+   margin-bottom: 12px;
+}
+
+input {
+   height: 44px;
+   /* width: 223px; */
+}
+
+.formInput {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+}
