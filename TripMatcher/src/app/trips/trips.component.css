@@ -10,14 +10,18 @@
 
 .tripImage {
    flex-grow: 2;
+   
 }
 
 .tripContent {
    flex-grow: 1;
+   width: auto;
+   
 }
    
 .afbeelding img{
    height: 320px;
+   width: 900px;
    }
     
 .like {
