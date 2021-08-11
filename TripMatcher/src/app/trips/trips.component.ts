@@ -24,19 +24,19 @@ export class TripsComponent implements OnInit {
       this.apiTrip = data;
     })
 
-    this.database.getTags(1).subscribe((data) => {
-      this.apiTags = data;
-    })
+    // this.database.getTags(1).subscribe((data) => {
+    //   this.apiTags = data;
+    // })
 
     // console.log("test: " + this.apiTrip.message);
     
   }
 
-  getTripId() {
-    this.database.getTags(1).subscribe((data) => {
-      this.apiTags = data;
-    })
-  }
+  // getTripId(id: number) {
+  //   this.database.getTags(id).subscribe((data) => {
+  //     this.apiTags = data;
+  //   })
+  // }
 
 
 

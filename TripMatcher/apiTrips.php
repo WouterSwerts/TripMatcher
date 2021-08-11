@@ -4,8 +4,15 @@ header("Content-Type:application/json");
 header("Access-Control-Allow-Origin: *");
 
 include "dataTrips.php";
+include "dataTags.php";
 
 $trip = getAllTrips();
+
+for ($i = 0; $i < count($trip); $i++) {
+  $trip[$i]["tripTags"]=getTags($trip[$i]["Trip_id"]);
+}
+
+//var_dump($trip[0]);
 
 
 jsonresponse(200, "Trip gevonden", $trip);
@@ -30,5 +37,7 @@ function jsonresponse($statuscode, $message, $trip) {
 
 
 }
+
+
 
 

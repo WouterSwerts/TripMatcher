@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   users = [];
 
-  userEmail = sessionStorage.getItem('userEmail');
+  // userEmail = sessionStorage.getItem('userEmail');
 
   constructor(public databaseService: DatabaseService, public topersonalpage: TopersonalpageService, public overlay: OverlayComponent) { }
 
