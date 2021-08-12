@@ -15,7 +15,8 @@
     </div>
     <div class="tagline">
 
-      <div class="tag" *ngFor="let tag of this.filter.apiTrip.trip[index].tripTags">{{tag["Category_name"]}}</div>
+      <div class="tag" *ngFor="let tag of this.filter.apiTrip.trip[index].tripTags"
+        (click)="filter.filterCategory(tag['Category_name'])"> {{tag["Category_name"]}}</div>
 
       <!-- <div (click)="veranderKleur()" [ngClass]="statusClass">LIKE</div> -->
     </div>

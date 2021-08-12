@@ -11,7 +11,7 @@ $db = new PDO("mysql:host=$dbHostname; dbname=$dbDatabank", "$dbUsername", "$dbP
 function getTags($trip_id) {
   global $db;
 
-  $query = "SELECT Category_name FROM tripcategory LEFT JOIN categorytable ON categorytable.Category_id = tripcategory.Category_id WHERE Trip_id =:trip_id;";
+  $query = "SELECT Category_name FROM tripcategory LEFT JOIN categorytable ON categorytable.Category_id = tripcategory.Category_id WHERE Trip_id =:trip_id  LIMIT 10;";
 
   $stmt = $db->prepare($query);
   $stmt->bindParam(':trip_id', $trip_id);
