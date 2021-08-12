@@ -5,8 +5,8 @@
       <a routerLink="">Home</a>
     </div>
     <div class="menuItem">
-      <a routerLink="">Destinations</a>
-      <div class="navBarPersonal">
+      <a class="padding" routerLink="">Destinations</a>
+      <div class="navBarPersonal margin">
         <p (click)="filter.filterCountry(Belgium)">Belgium</p>
         <p (click)="filter.filterCountry(Netherlands)">Netherlands</p>
         <p (click)="filter.filterCountry(France)">France</p>
@@ -16,13 +16,29 @@
       </div>
     </div>
     <div class="menuItem">
-      <a routerLink="">Activities</a>
+      <a routerLink="" class="padding">Activities</a>
+      <div class="navBarPersonal activities margin">
+        <p (click)="filter.filterCategory(activity['Category_name'])"
+          *ngFor="let activity of this.apiActivities.activity">{{activity["Category_name"]}}</p>
+      </div>
     </div>
+    <!-- <div class="menuItem">
+      <a class="padding" routerLink="">Destinations</a>
+      <div class="navBarPersonal margin destinations">
+        <p (click)="filter.filterCountry(Belgium)">Belgium</p>
+        <p (click)="filter.filterCountry(Netherlands)">Netherlands</p>
+        <p (click)="filter.filterCountry(France)">France</p>
+        <p (click)="filter.filterCountry(Italy)">Italy</p>
+        <p (click)="filter.filterCountry(Germany)">Germany</p>
+        <p (click)="filter.showAllTrips()">All Countries</p>
+      </div>
+    </div> -->
     <div class="menuItem">
       <a (click)="openNavBarPersonal()">
         <!-- <a routerLink="PersonalPage"> -->
         <div *ngIf="userName == undefined">My <span class="blauwTrip">Trip</span>Matcher</div>
-        <div *ngIf="userName != undefined">{{userName}}'s <span class="blauwTrip">Trip</span>Matcher</div>
+        <div *ngIf="userName != undefined">{{userName}}'s <span class="blauwTrip">Trip</span>Matcher
+        </div>
       </a>
       <div class="navBarPersonal">
         <div>

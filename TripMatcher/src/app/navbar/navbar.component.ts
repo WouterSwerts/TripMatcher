@@ -28,6 +28,8 @@ export class NavbarComponent implements OnInit {
 
   constructor(public credentials: CredentialsService, public openOverlay: OpenOverlayService, public router: Router, public database: DatabaseService, public filter: FilterService) { }
 
+  apiActivities: any;
+
   Belgium = "Belgium";
   Netherlands = "Netherlands";
   France = "France";
@@ -38,7 +40,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.userName = sessionStorage.getItem('userName');
 
-    
+    this.database.getMenuActivities().subscribe((data) => {
+      this.apiActivities = data;
+    })
+
   }
 
   openMenu() {

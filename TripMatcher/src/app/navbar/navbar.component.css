@@ -72,20 +72,30 @@ a {
    display: none;
    position: absolute;
    background: #303030;
-   opacity: 0.8;
+   opacity: 0.85;
    box-shadow: 5px 5px 0px #24B9E9;
    padding: 10px 20px;
+   /* margin-top: 15px; */
+
+}
+
+.margin {
+    margin-top: 15px;
 }
 
 .menuItem:hover .navBarPersonal {
-   display: block;
+   display: flex;
+   flex-direction: column;
+}
+
+.padding {
+   padding-bottom: 20px;
 }
 
 
 a {
    text-decoration: none;
    color: black;
-   
    font-size: 16px;
    font-weight: 400;
 }
@@ -98,7 +108,29 @@ a:hover {
    font-weight: bold;
 }
 
+.activities {
+   width: 550px;
+   height: 600px;
+   flex-wrap: wrap;
+   padding-top: 22px;
+   margin-left: -180px;
+      
 
+}
+
+.activities p {
+   /* border: 1px solid white;
+   border-radius: 15px;
+   padding: 5px 10px;
+   margin-right: 4px; */
+   /* width: fit-content; */
+   margin: 0;
+   margin-bottom: 15px;
+   margin-right: 15px;
+   cursor: pointer;
+   
+
+}
 
 
 .navBar {
@@ -108,6 +140,10 @@ a:hover {
    flex-direction: row;
    padding-bottom: 10px;
    /* border: 1px solid black; */
+}
+
+.padding {
+   padding-bottom: 15px;
 }
 
 .navItems {
@@ -123,6 +159,10 @@ a:hover {
 
 }
 
+.destinations p {
+   margin-bottom: 10px;;
+}
+
 .menuHamburger {
    display: none;
 }
@@ -135,6 +175,7 @@ a:hover {
 
 .navBarPersonal p {
    color: white;
+   cursor: pointer;
 }
 
 .navBarPersonal p:hover {
