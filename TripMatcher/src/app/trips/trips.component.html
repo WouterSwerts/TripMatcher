@@ -1,4 +1,4 @@
-<div class="activiteit" *ngFor="let item of this.filter.apiTrip.trip; let index = index">
+<div #target class="activiteit" *ngFor="let item of this.filter.apiTrip.trip; let index = index">
   <div class="tripImage">
     <div class="afbeelding">
       <img src="{{item.Image}}" alt="image of activity">
