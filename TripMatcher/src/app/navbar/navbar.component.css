@@ -68,6 +68,20 @@ a {
    display: none;
 }
 
+.navBarPersonal {
+   display: none;
+   position: absolute;
+   background: #303030;
+   opacity: 0.8;
+   box-shadow: 5px 5px 0px #24B9E9;
+   padding: 10px 20px;
+}
+
+.menuItem:hover .navBarPersonal {
+   display: block;
+}
+
+
 a {
    text-decoration: none;
    color: black;
@@ -77,12 +91,14 @@ a {
 }
 
 .menuItem {
-   margin-left: 60px;
+   margin-left: 100px;
 }
 
 a:hover {
    font-weight: bold;
 }
+
+
 
 
 .navBar {
@@ -115,13 +131,7 @@ a:hover {
    display: none;
 }
 
-.navBarPersonal {
-   position: absolute;
-   background: #303030;
-   opacity: 0.8;
-   box-shadow: 5px 5px 0px #24B9E9;
-   padding: 10px 20px;
-}
+
 
 .navBarPersonal p {
    color: white;
