@@ -2,7 +2,7 @@
 @media only screen and (min-width: 1080px) {
 .activiteit{
    display: flex;
-   /* height: 320px; */
+   height: 320px;
    margin-bottom: 1rem;
    background-color: #EAEAEA;
    position: relative;
@@ -36,7 +36,7 @@ h3{
       font-weight: bold;
       font-size: 1.5rem;
       margin: 1rem;
-      margin-top: 4rem;
+      margin-top: 2rem;
    }
    
 .tekst{
@@ -45,27 +45,38 @@ h3{
    font-weight: 300;
    font-size: 16px;
    line-height: 19px;
+   align-content: center;
    }
    
 .tagline{
       display: flex;
+      flex-wrap: wrap;
       position: absolute;
       bottom: 0;
       left: 1;
       margin-bottom: 1rem;
       margin-left: 1rem;
+      margin-top: 1rem;
+      
    }
    
 .tag{
+   cursor: pointer;
    border: solid black 1px;
    width: max-content;
    border-radius: 15px;
    padding: 3px 10px;
    font-size: 13px;
-   margin: 0.5rem;
+   margin: 4px;
   
    /* box-shadow: black 4px 4px 4px ; */
    }
+
+.tag:hover {
+   color: #24B9E9;
+   border: solid #24B9E9 1px;
+    
+}
     
 .voor{
       background-image: url(/assets/img/Hart.svg) ;

@@ -13,6 +13,7 @@ export class DatabaseService {
   tripsUrl = "http://localhost/TripMatcher/TripMatcher/apiTrips.php";
   tagsUrl = "http://localhost/TripMatcher/TripMatcher/apiTags.php";
   tripsCountryUrl = "http://localhost/TripMatcher/TripMatcher/apiTripCountry.php";
+  filterCategoryUrl = "http://localhost/TripMatcher/TripMatcher/apiFilterCategory.php";
 
   constructor(private http: HttpClient) { }
 
@@ -34,7 +35,11 @@ export class DatabaseService {
   }
 
   getTripsCountry(country: string): Observable <any> {
-    return this.http.get(`${this.tripsCountryUrl}?countryName=${country}`)
+    return this.http.get(`${this.tripsCountryUrl}?countryName=${country}`);
+  }
+
+  filterCategory(categoryName: string): Observable <any> {
+    return this.http.get(`${this.filterCategoryUrl}?categoryName=${categoryName}`);
   }
 
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FilterService } from '../filter.service';
+
 @Component({
   selector: 'app-main-filter',
   templateUrl: './main-filter.component.html',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainFilterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public filter: FilterService) { }
+
+  Adventure = "Adventure";
+  Family = "Family";
+  Foodie = "Foodie";
+  ArtCulture = "Culture";
+  Beaches = "Beach";
+  
+
 
   ngOnInit(): void {
+
   }
 
 }

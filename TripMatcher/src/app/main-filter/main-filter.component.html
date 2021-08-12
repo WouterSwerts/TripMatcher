@@ -4,22 +4,22 @@
     <p>explore inspiring trips</p>
   </div>
   <div class="filterItems">
-    <div class="filterAdventure filterBox">
+    <div class="filterAdventure filterBox" (click)="filter.filterCategory(Adventure)">
       <p>Adventure</p>
     </div>
-    <div class="filterFamily filterBox">
+    <div class="filterFamily filterBox" (click)="filter.filterCategory(Family)">
       <p>Family</p>
     </div>
-    <div class="filterFoodie filterBox">
+    <div class="filterFoodie filterBox" (click)="filter.filterCategory(Foodie)">
       <p>Foodie</p>
     </div>
-    <div class="filterArtCulture filterBox">
+    <div class="filterArtCulture filterBox" (click)="filter.filterCategory(ArtCulture)">
       <p>Art & Culture</p>
     </div>
-    <div class="filterBeaches filterBox">
+    <div class="filterBeaches filterBox" (click)="filter.filterCategory(Beaches)">
       <p>Beaches</p>
     </div>
-    <div class="filterMore filterBox">
+    <div class="filterMore filterBox" (click)="filter.showAllTrips()">
       <p>More..</p>
     </div>
   </div>

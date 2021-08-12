@@ -68,7 +68,7 @@ Country_id int, CONSTRAINT FK_Country_id Foreign key(Country_id) REFERENCES Coun
 
 
 SELECT * FROM tripmatcher.categorytable;
-insert into categorytable(category_name) Values ("Nature"), ("City"), ("Small Town"), ("Mountain"), ("Lake"), ("Beach"), ("River"), ("Sea"), ("Forest"), ("Vineyard"), ("Gorge"), ("Cave"), ("Viewpoint"), ("Indoor"), ("Outdoor"), ("Walking"), ("Running"), ("Cycling"), ("Hiking"), ("Kayaking"), ("Swimming"), ("Diving"), ("Winter Sports"), ("Climbing"), ("Rafting"), ("Skydiving"), ("Art & Culture"), ("Exhibitions"), ("Foodie"), ("Festivals"), ("Architecture"), ("Historical Sites"), ("Local Experiences"), ("Sightseeing"), ("Road Trip"), ("Blue Voyage"), ("Family"), ("Children Friendly"), ("Pet Friendly"), ("Romantic"), ("Disability Friendly"), ("Corona Friendly"), ("Active"), ("Adventure"), ("Calm"), ("Lazy"), ("Public Transportation"), ("Private Vehicle"), ("Ponds");
+insert into categorytable(category_name) Values ("Nature"), ("City"), ("Small_Town"), ("Mountain"), ("Lake"), ("Beach"), ("River"), ("Sea"), ("Forest"), ("Vineyard"), ("Gorge"), ("Cave"), ("Viewpoint"), ("Indoor"), ("Outdoor"), ("Walking"), ("Running"), ("Cycling"), ("Hiking"), ("Kayaking"), ("Swimming"), ("Diving"), ("Winter_Sports"), ("Climbing"), ("Rafting"), ("Skydiving"), ("Culture"), ("Exhibitions"), ("Foodie"), ("Festivals"), ("Architecture"), ("History"), ("Local"), ("Sightseeing"), ("Road_Trip"), ("Blue_Voyage"), ("Family"), ("Children_Friendly"), ("Pet_Friendly"), ("Romantic"), ("Disability_Friendly"), ("Corona_Friendly"), ("Active"), ("Adventure"), ("Calm"), ("Lazy"), ("Public_Transportation"), ("Private_Vehicle"), ("Ponds");
 insert into categorytable(category_name) Values ("Amusementpark");
 
 SELECT * FROM tripmatcher.countrytable;
