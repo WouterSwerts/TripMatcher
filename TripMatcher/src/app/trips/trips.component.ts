@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { DatabaseService } from '../database.service';
 
+import { FilterService } from '../filter.service';
+
 @Component({
   selector: 'app-trips',
   templateUrl: './trips.component.html',
@@ -13,52 +15,15 @@ export class TripsComponent implements OnInit {
   apiTrip: any;
   apiTags: any;
 
-  // id = this.item;
 
-  filter = "belgium";
-
-  constructor(public database: DatabaseService) { }
+  constructor(public database: DatabaseService, public filter: FilterService) { }
 
 
   ngOnInit(): void {
-    // this.database.getTrips().subscribe((data) => {
-    //   this.apiTrip = data;
-    // })
 
-    this.database.getTripsCountry(this.filter).subscribe((data) => {
-      this.apiTrip = data;
-    })
-
-    // this.database.getTags(1).subscribe((data) => {
-    //   this.apiTags = data;
-    // })
-
-    // console.log("test: " + this.apiTrip.message);
+    this.filter.showAllTrips();
     
   }
-
-  // getTripId(id: number) {
-  //   this.database.getTags(id).subscribe((data) => {
-  //     this.apiTags = data;
-  //   })
-  // }
-
-  filterMe() {
-
-    this.filter = "germany";
-
-    this.database.getTripsCountry(this.filter).subscribe((data) => {
-      this.apiTrip = data;
-    })
-
-  }
-
-  filterIt(country: any) {
-    this.database.getTripsCountry(country).subscribe((data) => {
-      this.apiTrip = data;
-    })
-  }
-
 
 
 }

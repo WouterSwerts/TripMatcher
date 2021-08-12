@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 
 import { DatabaseService } from '../database.service';
 
-import { TripsComponent } from '../trips/trips.component';
+import { FilterService } from '../filter.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -25,9 +26,14 @@ export class NavbarComponent implements OnInit {
 
   openNavBarPersonalDisplay = false;
 
-  constructor(public credentials: CredentialsService, public openOverlay: OpenOverlayService, public router: Router, public database: DatabaseService) { }
+  constructor(public credentials: CredentialsService, public openOverlay: OpenOverlayService, public router: Router, public database: DatabaseService, public filter: FilterService) { }
 
   Belgium = "Belgium";
+  Netherlands = "Netherlands";
+  France = "France";
+  Italy = "Italy";
+  Germany = "Germany";
+  All = '"Belgium" OR Country="Germany"';
 
   ngOnInit(): void {
     this.userName = sessionStorage.getItem('userName');
@@ -58,13 +64,5 @@ export class NavbarComponent implements OnInit {
     this.router.navigate([""]);
     this.openNavBarPersonalDisplay = false;
   }
-
-  filterCountry(){
-    this.database.belgium = "italy";
-    console.log(this.database.belgium);
-  };
-
-
-
 
 }

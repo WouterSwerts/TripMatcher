@@ -7,11 +7,12 @@
     <div class="menuItem">
       <a routerLink="">Destinations</a>
       <div class="navBarPersonal">
-        <p (click)="filterCountry()">{{Belgium}}Belgium</p>
-        <p>Netherlands</p>
-        <p>France</p>
-        <p>Italy</p>
-        <p>Germany</p>
+        <p (click)="filter.filterCountry(Belgium)">Belgium</p>
+        <p (click)="filter.filterCountry(Netherlands)">Netherlands</p>
+        <p (click)="filter.filterCountry(France)">France</p>
+        <p (click)="filter.filterCountry(Italy)">Italy</p>
+        <p (click)="filter.filterCountry(Germany)">Germany</p>
+        <p (click)="filter.showAllTrips()">All Countries</p>
       </div>
     </div>
     <div class="menuItem">

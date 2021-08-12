@@ -16,8 +16,6 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) { }
 
-  belgium = "";
-
 
   getItem(login: string): Observable<any> {
     return this.http.get(`${this.baseUrl}?user=${login}`);
