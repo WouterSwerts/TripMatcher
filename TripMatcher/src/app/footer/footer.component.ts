@@ -15,6 +15,8 @@ export class FooterComponent implements OnInit {
 
   openOverlayComponent() {
     this.openOverlay.changeOverlayDisplay();
+    this.openOverlay.loginComponent = false;
+    this.openOverlay.registerComponent = true;
   }
 
 }

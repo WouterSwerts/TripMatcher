@@ -44,6 +44,15 @@ export class NavbarComponent implements OnInit {
       this.apiActivities = data;
     })
 
+    // this.refreshPage();
+
+  }
+
+  
+
+  refreshPage() {
+    window.location.reload();
+    return
   }
 
   openMenu() {
@@ -68,6 +77,19 @@ export class NavbarComponent implements OnInit {
     sessionStorage.clear();
     this.router.navigate([""]);
     this.openNavBarPersonalDisplay = false;
+  }
+
+  openLogin() {
+    this.openOverlay.changeOverlayDisplay();
+    this.openOverlay.loginComponent = true;
+    this.openOverlay.registerComponent = false;
+  }
+
+  openRegister() {
+    this.openOverlay.changeOverlayDisplay();
+    this.openOverlay.loginComponent = false;
+    this.openOverlay.registerComponent = true;
+
   }
 
 }

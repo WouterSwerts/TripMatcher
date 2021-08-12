@@ -20,9 +20,16 @@ export class PersonalPageComponent implements OnInit {
     // this.userEmail = this.credentials.userEmail;
     // this.userName = this.credentials.userName;
 
+    
+
     this.userEmail = sessionStorage.getItem('userEmail');
     this.userName = sessionStorage.getItem('userName');
+
+    // window.location.reload();
+    
   }
+
+ 
 
 
  
