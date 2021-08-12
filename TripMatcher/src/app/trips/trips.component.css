@@ -1,11 +1,53 @@
+.activiteit{
+   margin-bottom: 1rem;
+   background-color: #EAEAEA;
+   position: relative;
+   height: 500px;
+   margin-bottom: 2rem;
+   }
+.tripImage {
+   flex-grow: 2; 
+   }
+   
+.tripContent {
+   flex-grow: 1;
+   width: auto;
+   padding: 30px; 
+   }
+      
+.afbeelding img{
+   height: 200px;
+   width: 100vw;
+      }
+.tag{
+   border: solid black 1px;
+   width: max-content;
+   border-radius: 15px;
+   padding: 3px 10px;
+   font-size: 13px;
+   margin: 0.5rem;
+}
+.tagline{
+   display: flex;
+   position: absolute;
+   bottom: 0;
+   left: 1;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   
+  
+}
+
+
 
 @media only screen and (min-width: 1080px) {
 .activiteit{
    display: flex;
-   /* height: 320px; */
    margin-bottom: 1rem;
    background-color: #EAEAEA;
    position: relative;
+   height: 320px;
+   margin-bottom: 2rem;
    }
 
 .tripImage {
