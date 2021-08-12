@@ -9,6 +9,10 @@ export class OpenOverlayService {
 
   overlayDisplay = false;
 
+  loginComponent = false;
+
+  registerComponent = false;
+
   changeOverlayDisplay() {
     this.overlayDisplay = true;
     return this.overlayDisplay;

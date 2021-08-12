@@ -11,6 +11,8 @@ export class TopersonalpageService {
   displayHomePage = true;
   displayPersonalPage = false;
 
+
+
   toPersonalPage() {
     this.router.navigate(['personalPage'])
     this.displayHomePage = false;

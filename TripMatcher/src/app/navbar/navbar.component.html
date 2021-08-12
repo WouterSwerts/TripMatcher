@@ -42,8 +42,10 @@
       </a>
       <div class="navBarPersonal">
         <div>
-          <p (click)="openSettings()">Account Settings</p>
-          <p (click)="signOut()">Sign Out</p>
+          <p *ngIf="userName != undefined" (click)="openSettings()">Account Settings</p>
+          <p *ngIf="userName != undefined" (click)="signOut()">Sign Out</p>
+          <p *ngIf="userName == undefined" (click)="openRegister()">Register</p>
+          <p *ngIf="userName == undefined" (click)="openLogin()">Sign in</p>
         </div>
       </div>
 
