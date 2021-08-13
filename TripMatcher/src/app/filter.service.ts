@@ -3,22 +3,26 @@ import { Data } from '@angular/router';
 
 import { DatabaseService } from './database.service';
 
+import { Router } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
 export class FilterService {
 
-  constructor(public database: DatabaseService) { }
+  constructor(public database: DatabaseService, public router: Router) { }
 
   country = "";
   category= "";
   apiTrip: any;
 
+  target: any;
+
   filterCountry(navCountry: any){
     this.country = navCountry;
-    // console.log(navCountry);
-
     this.filterMe(this.country);
+    this.target = document.getElementById("trips");
+    this.target.scrollIntoView({behavior: "smooth"});
   };
 
   filterMe(country: any) {
@@ -38,6 +42,8 @@ export class FilterService {
   filterCategory(categoryName: any) {
     this.category = categoryName;
     this.filterOnCategory(this.category);
+    this.target = document.getElementById("trips");
+    this.target.scrollIntoView({behavior: "smooth"});
     
   }
 

@@ -1,0 +1,70 @@
+<div class="interests">
+  <div class="header">
+    <p><span>Answer questions below </span> <b>and enjoy personal suggestions...</b></p>
+  </div>
+  <div class="questionsContainer">
+    <h3>Your interests</h3>
+    <p>When I close my eyes and think of my ideal vacation, I am in ...</p>
+    <div class="tagsContainer">
+      <p [ngClass]="{'active' : toggle}" *ngFor="let tag of this.apiTags1.Qtags"
+        (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}
+      </p>
+
+    </div>
+    <p>I would love to have a ...</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags2.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}</p>
+    </div>
+    <p>I can see myself being ... during my holidays</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags3.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}</p>
+    </div>
+    <p>For me nature equals to ...</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags4.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}</p>
+    </div>
+    <p>My favorite sports are ...</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags5.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}</p>
+    </div>
+    <p>When it comes to arts & culture I cannot miss ...</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags6.Qtags">{{tag["Category_name"]}}</p>
+    </div>
+    <!-- <p>I would like to travel to ...</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags7.Qtags">{{tag["Category_name"]}}</p>
+    </div> -->
+    <p>I prefer places that are...</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags7.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}</p>
+    </div>
+    <p>I prefer ... activities</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags8.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}</p>
+    </div>
+    <p>I usually travel by ...</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags9.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}</p>
+    </div>
+    <!-- <h3>Your countries</h3>
+    <p>I would like to travel to ...</p>
+    <div class="tagsContainer">
+      <p *ngFor="let tag of this.apiTags1.Qtags">{{tag["Category_name"]}}</p>
+    </div> -->
+    <div class="interestsFooter">
+      <p>Continue with suggestions</p>
+      <img src="assets/img/Arrow.svg" alt="arrow">
+    </div>
+  </div>
+
+
+</div>

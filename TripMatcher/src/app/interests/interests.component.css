@@ -1,0 +1,141 @@
+.interests {
+   margin-top: 50px;
+}
+
+.header {
+   background-color: #EAEAEA;
+   height: 160px;
+   padding-left: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header p {
+   font-size: 18px;
+   font-weight: 200;
+}
+
+.header span {
+   color: #24B9E9;
+   font-weight: 800;
+}
+
+h3 {
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 18px;
+   line-height: 24px;
+   color: #303030;
+   margin-top: 50px;
+}
+
+.questionsContainer {
+   margin-left: 20px;
+   margin-top: 100px;
+}
+
+.questionsContainer p {
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 19px;
+   color: #303030;
+   margin-bottom: 5px;
+   margin-top: 50px;
+}
+
+.tagsContainer {
+   display: flex;
+   flex-direction: row;
+}
+
+.tagsContainer p {
+   margin-top: 5px;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 15px;
+   line-height: 21px;
+   text-align: center;
+   margin-right: 10px;
+   border:  black solid 1px;
+   border-radius: 25px;
+   padding: 4px 10px;
+   cursor: pointer;
+}
+
+.tagsContainer p:hover {
+   border: #24B9E9 solid 1px;
+   color: #24B9E9;
+}
+
+.tagsContainer .active {
+   border: #24B9E9 solid 1px;
+   color: white;
+   background-color: #24B9E9;
+}
+
+
+.interestsFooter img {
+   cursor: pointer;
+}
+
+
+.interestsFooter {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin-top: 50px;
+   
+}
+
+.interestsFooter p {
+   font-family: Inter;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 14px;
+   line-height: 18px;
+   color: #24B9E9;
+   margin-right: 8px;
+   margin-top: 0px;
+   margin-bottom: 0;
+   cursor: pointer;
+}
+
+
+
+
+@media only screen and (min-width: 1080px) {
+
+.header {
+   height: 160px;
+   padding: 50px 230px;
+}
+
+.header p {
+   font-size: 28px;
+}
+
+
+h3 {
+   font-size: 26px;
+   line-height: 31px;
+}
+
+.questionsContainer {
+   margin-left: 160px;
+   margin-top: 100px;
+}
+
+.questionsContainer p {
+   font-size: 16px;
+}
+
+.tagsContainer p {
+   font-size: 17px;
+}
+
+}

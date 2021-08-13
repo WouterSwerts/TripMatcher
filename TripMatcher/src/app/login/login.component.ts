@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
         this.overlay.closeOverlay();
         sessionStorage.setItem('userEmail', this.apiLogin.email);
         sessionStorage.setItem('userName', this.apiLogin.name);
+        sessionStorage.setItem('userID', this.apiLogin.id);
         this.topersonalpage.toPersonalPage();
         
         
