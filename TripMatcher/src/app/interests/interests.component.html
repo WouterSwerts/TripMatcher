@@ -34,7 +34,8 @@
     </div>
     <p>When it comes to arts & culture I cannot miss ...</p>
     <div class="tagsContainer">
-      <p *ngFor="let tag of this.apiTags6.Qtags">{{tag["Category_name"]}}</p>
+      <p *ngFor="let tag of this.apiTags6.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+        {{tag["Category_name"]}}</p>
     </div>
     <!-- <p>I would like to travel to ...</p>
     <div class="tagsContainer">
