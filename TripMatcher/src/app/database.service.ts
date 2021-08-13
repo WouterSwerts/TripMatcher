@@ -8,23 +8,37 @@ import { Observable } from 'rxjs';
 })
 export class DatabaseService {
   extralijst = [];
+
+  // Get from DB
   baseUrl = "http://localhost/TripMatcher/TripMatcher/api.php";
-  registrationUrl = "http://localhost/TripMatcher/TripMatcher/apiPost.php";
   tripsUrl = "http://localhost/TripMatcher/TripMatcher/apiTrips.php";
   tagsUrl = "http://localhost/TripMatcher/TripMatcher/apiTags.php";
   tripsCountryUrl = "http://localhost/TripMatcher/TripMatcher/apiTripCountry.php";
   filterCategoryUrl = "http://localhost/TripMatcher/TripMatcher/apiFilterCategory.php";
   menuActivitiesUrl = "http://localhost/TripMatcher/TripMatcher/apiMenuActivities.php";
+  questionTagsUrl = "http://localhost/TripMatcher/TripMatcher/apiQuestionTags.php";
+
+  // Post to DB
+  registrationUrl = "http://localhost/TripMatcher/TripMatcher/apiPost.php";
+  addTagsToUserUrl = "http://localhost/TripMatcher/TripMatcher/apiTagsToUser.php"
 
   constructor(private http: HttpClient) { }
 
-
-  getItem(login: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}?user=${login}`);
-  }
-
+    // Post to DB
   postItem(data: object): Observable<any> {
     return this.http.post(this.registrationUrl, data);
+  }
+
+  addTagsToUser(data: object): Observable <any>{ 
+    return this.http.post(this.addTagsToUserUrl, data);
+  }
+
+
+
+
+   // Get from DB
+  getItem(login: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}?user=${login}`);
   }
 
   getTrips(): Observable<any> {
@@ -45,6 +59,10 @@ export class DatabaseService {
 
   getMenuActivities(): Observable <any> {
     return this.http.get(this.menuActivitiesUrl);
+  }
+
+  getQuestionTags(questionID: any): Observable <any> {
+    return this.http.get(`${this.questionTagsUrl}?questionID=${questionID}`);
   }
 
 

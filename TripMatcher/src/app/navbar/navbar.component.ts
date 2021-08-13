@@ -37,6 +37,8 @@ export class NavbarComponent implements OnInit {
   Germany = "Germany";
   All = '"Belgium" OR Country="Germany"';
 
+  target: any;
+
   ngOnInit(): void {
     this.userName = sessionStorage.getItem('userName');
 
