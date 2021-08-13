@@ -17,10 +17,6 @@ export class PersonalPageComponent implements OnInit {
   constructor(public credentials: CredentialsService, public router: Router) { }
 
   ngOnInit(): void {
-    // this.userEmail = this.credentials.userEmail;
-    // this.userName = this.credentials.userName;
-
-    
 
     this.userEmail = sessionStorage.getItem('userEmail');
     this.userName = sessionStorage.getItem('userName');

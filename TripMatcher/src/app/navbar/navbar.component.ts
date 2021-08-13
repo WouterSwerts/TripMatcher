@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
 
   menu: any;
 
-  userName: any;
+  userName= sessionStorage.getItem('userName');
 
   openClose = false;
 

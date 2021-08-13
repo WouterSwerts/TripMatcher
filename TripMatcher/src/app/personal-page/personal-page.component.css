@@ -51,6 +51,7 @@ img {
    line-height: 21px;
    color: #303030;
    display: inline-block;
+   cursor: pointer;
 }
 
 .profileNavigation a:active {
