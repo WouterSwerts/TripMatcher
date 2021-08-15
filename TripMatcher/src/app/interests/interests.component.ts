@@ -23,7 +23,6 @@ export class InterestsComponent implements OnInit {
 
   sessionUserID = sessionStorage.getItem('userID');
 
-  toggle = false;
 
 
   ngOnInit(): void {
@@ -56,7 +55,6 @@ export class InterestsComponent implements OnInit {
       this.apiTags9 = data;
     })
 
-    // this.pActive = false;
 
   }
 
@@ -64,16 +62,9 @@ clickedTagsToUserCategoryTable(category: any) {
 
   this.database.addTagsToUser({"User_id":this.sessionUserID, "Category_id":category}).subscribe(result=>console.log(result));
 
-  this.toggle = true;
 
 }
 
   
 
 }
-
-
-
-// changeColor () {
-// this.currentColor = (this.currentColor == 'blue') ? 'black' : 'blue';
-// }

@@ -6,8 +6,7 @@
     <h3>Your interests</h3>
     <p>When I close my eyes and think of my ideal vacation, I am in ...</p>
     <div class="tagsContainer">
-      <p [ngClass]="{'active' : toggle}" *ngFor="let tag of this.apiTags1.Qtags"
-        (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+      <p *ngFor="let tag of this.apiTags1.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
         {{tag["Category_name"]}}
       </p>
 
