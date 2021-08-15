@@ -15,6 +15,7 @@ export class FilterService {
   country = "";
   category= "";
   apiTrip: any;
+  apiSuggestions: any;
 
   target: any;
 
@@ -52,6 +53,12 @@ export class FilterService {
       this.apiTrip = data
     })
   }
+
+filterSuggestionsUser(userID: any) {
+  this.database.getSuggestionsTripsUser(userID).subscribe((data) => {
+    this.apiSuggestions = data
+  })
+}
 
 
 }

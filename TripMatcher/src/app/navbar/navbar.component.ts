@@ -94,4 +94,8 @@ export class NavbarComponent implements OnInit {
 
   }
 
+  topp() {
+    this.router.navigate(["personalPage"]);
+  }
+
 }

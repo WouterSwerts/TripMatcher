@@ -1,0 +1,128 @@
+
+@media only screen and (min-width: 1080px) {
+   .favoriteTags {
+      background-color: #EAEAEA;
+      height: 324px;
+      padding: 49px;
+   }
+
+   .favoritesTagsTitle h3 {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 31px;
+      color: #303030;
+      margin-left: 100px;
+   }
+
+   .favoriteTagsContainer {
+      margin-left: 100px;
+   }
+
+   .favoriteTags p {
+      margin-left: 100px;
+   }
+   
+   .activiteit{
+      display: flex;
+      height: 320px;
+      margin-bottom: 1rem;
+      background-color: #EAEAEA;
+      position: relative;
+      }
+   
+   .tripImage {
+      flex-grow: 2;
+      
+   }
+
+   .suggestionsTitle {
+      margin-left: 150px;
+      margin-bottom: 50px;
+   }
+
+   .suggestionsTitle p {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 31px;
+      color: #303030;
+   }
+   
+   .tripContent {
+      flex-grow: 1;
+      width: auto;
+      
+   }
+      
+   .afbeelding img{
+      height: 320px;
+      width: 900px;
+      }
+       
+   .like {
+         position: absolute;
+         left: 900px;
+         top: 10px;
+         z-index: 100;
+       }
+   
+      
+   h3{
+         font-weight: bold;
+         font-size: 1.5rem;
+         margin: 1rem;
+         margin-top: 2rem;
+      }
+      
+   .tekst{
+      margin: 1rem;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      align-content: center;
+      }
+      
+   .tagline{
+         display: flex;
+         flex-wrap: wrap;
+         position: absolute;
+         bottom: 0;
+         left: 1;
+         margin-bottom: 1rem;
+         margin-left: 1rem;
+         margin-top: 1rem;
+         
+      }
+      
+   .tag{
+      cursor: pointer;
+      border: solid black 1px;
+      width: max-content;
+      border-radius: 15px;
+      padding: 3px 10px;
+      font-size: 13px;
+      margin: 4px;
+     
+      /* box-shadow: black 4px 4px 4px ; */
+      }
+   
+   .tag:hover {
+      color: #24B9E9;
+      border: solid #24B9E9 1px;
+       
+   }
+       
+   .voor{
+         background-image: url(/assets/img/Hart.svg) ;
+        background-repeat: no-repeat;
+      }
+      
+   .favo{
+         background-image: url(/assets/img/Hart2.svg) ;
+        background-repeat: no-repeat;
+      }
+   }

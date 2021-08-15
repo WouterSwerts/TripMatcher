@@ -1,0 +1,43 @@
+<div class="suggestions">
+  <div class="favoriteTags">
+    <div class="favoritesTagsTitle">
+      <h3>Your interests and preferences</h3>
+    </div>
+    <div class="favoriteTagsContainer">
+      <p class="tag">text X</p>
+    </div>
+    <p>View and edit your preferences</p>
+  </div>
+  <div class="suggestionsTitle">
+    <p>Our suggestions for you</p>
+  </div>
+  <div #target class="activiteit" *ngFor="let item of this.filter.apiSuggestions.trip; let index = index">
+    <div class="tripImage">
+      <div class="afbeelding">
+        <img src="{{item.Image}}" alt="image of activity">
+      </div>
+      <!-- <div (click)="favo()" [ngClass]="statusClass" class="like"><img src="/assets/img/Hart.svg" alt="hart"> -->
+      <!-- </div> -->
+    </div>
+    <div class="tripContent">
+      <div class="titel">
+        <h3>{{item.Title}}</h3>
+      </div>
+      <div class="tekst">
+        <p>{{item.Summary}}</p>
+      </div>
+      <div class="tagline">
+
+        <div class="tag" *ngFor="let tag of this.filter.apiSuggestions.trip[index].tripTags"
+          (click)="filter.filterCategory(tag['Category_name'])"> {{tag["Category_name"]}}</div>
+
+        <!-- <div (click)="veranderKleur()" [ngClass]="statusClass">LIKE</div> -->
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+{{filter.apiSuggestions.trip.Title}}
