@@ -17,6 +17,7 @@ export class DatabaseService {
   filterCategoryUrl = "http://localhost/TripMatcher/TripMatcher/apiFilterCategory.php";
   menuActivitiesUrl = "http://localhost/TripMatcher/TripMatcher/apiMenuActivities.php";
   questionTagsUrl = "http://localhost/TripMatcher/TripMatcher/apiQuestionTags.php";
+  suggestionsTripsUrl = "http://localhost/TripMatcher/TripMatcher/apiSuggestionsTrips.php";
 
   // Post to DB
   registrationUrl = "http://localhost/TripMatcher/TripMatcher/apiPost.php";
@@ -63,6 +64,10 @@ export class DatabaseService {
 
   getQuestionTags(questionID: any): Observable <any> {
     return this.http.get(`${this.questionTagsUrl}?questionID=${questionID}`);
+  }
+
+  getSuggestionsTripsUser(userID: any): Observable <any> {
+    return this.http.get(`${this.suggestionsTripsUrl}?userID=${userID}`);
   }
 
 

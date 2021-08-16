@@ -8,15 +8,17 @@
   </div>
   <div class="profileNavigation">
     <!-- <a routerlink="">Favorites</a> -->
-    <a routerlink="">Interests</a>
-    <a routerlink="">Suggestions</a>
+    <a (click)="goToInterests()">Interests</a>
+    <a (click)="goToSuggestions()">Suggestions</a>
     <!-- <a routerlink="">My Trips</a> -->
   </div>
 </div>
 <div class="profileContent">
 
+  <app-suggestions *ngIf="suggestions"></app-suggestions>
 
-  <app-interests></app-interests>
+
+  <app-interests *ngIf="interests"></app-interests>
 
 
   <!-- <app-trips></app-trips> -->

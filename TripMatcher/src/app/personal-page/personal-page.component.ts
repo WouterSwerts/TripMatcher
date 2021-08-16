@@ -13,6 +13,10 @@ export class PersonalPageComponent implements OnInit {
   userEmail: any;
   userName: any;
 
+  suggestions = true;
+  interests = false;
+
+
 
   constructor(public credentials: CredentialsService, public router: Router) { }
 
@@ -23,6 +27,16 @@ export class PersonalPageComponent implements OnInit {
 
     // window.location.reload();
     
+  }
+
+  goToInterests() {
+    this.suggestions = false;
+    this.interests = true;
+  }
+
+  goToSuggestions() {
+    this.suggestions = true;
+    this.interests = false;
   }
 
  
