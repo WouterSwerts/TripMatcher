@@ -13,9 +13,11 @@ export class SuggestionsComponent implements OnInit {
 
   apiSuggestions: any;
 
+  userID = sessionStorage.getItem('userID');
+
   ngOnInit(): void {
 
-    this.filter.filterSuggestionsUser(3);
+    this.filter.filterSuggestionsUser(this.userID);
 
   }
 
