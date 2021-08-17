@@ -3,7 +3,7 @@
 }
 
 .header {
-   background-color: #EAEAEA;
+   background-color: var(--background-color-light);
    height: 160px;
    padding-left: 30px;
    display: flex;
@@ -17,7 +17,7 @@
 }
 
 .header span {
-   color: #24B9E9;
+   color: var(--primary-color-blue);
    font-weight: 800;
 }
 
@@ -42,7 +42,7 @@ h3 {
    font-weight: 300;
    font-size: 16px;
    line-height: 19px;
-   color: #303030;
+   color: var(--secondary-color);
    margin-bottom: 5px;
    margin-top: 50px;
 }
@@ -50,6 +50,7 @@ h3 {
 .tagsContainer {
    display: flex;
    flex-direction: row;
+   color: #6B6B6B;
 }
 
 .tagsContainer p {
@@ -61,21 +62,22 @@ h3 {
    line-height: 21px;
    text-align: center;
    margin-right: 10px;
-   border:  black solid 1px;
+   border: #6B6B6B solid 1px;
    border-radius: 25px;
    padding: 4px 10px;
    cursor: pointer;
+   color: #6B6B6B;
 }
 
 .tagsContainer p:hover {
-   border: #24B9E9 solid 1px;
-   color: #24B9E9;
+   border: var(--primary-color-blue) solid 1px;
+   color: var(--primary-color-blue);
 }
 
 .tagsContainer .active {
-   border: #24B9E9 solid 1px;
+   border: var(--primary-color-blue) solid 1px;
    color: white;
-   background-color: #24B9E9;
+   background-color: var(--primary-color-blue);
 }
 
 
@@ -98,7 +100,7 @@ h3 {
    font-weight: bold;
    font-size: 14px;
    line-height: 18px;
-   color: #24B9E9;
+   color: var(--primary-color-blue);
    margin-right: 8px;
    margin-top: 0px;
    margin-bottom: 0;

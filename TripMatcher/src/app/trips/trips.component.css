@@ -1,10 +1,15 @@
+p {
+   color: var(--secondary-color);
+}
+
+
 
 @media only screen and (min-width: 1080px) {
 .activiteit{
    display: flex;
    height: 320px;
    margin-bottom: 1rem;
-   background-color: #EAEAEA;
+   background-color: var(--background-color-light);
    position: relative;
    }
 
@@ -37,6 +42,7 @@ h3{
       font-size: 1.5rem;
       margin: 1rem;
       margin-top: 2rem;
+      color: var(--secondary-color);
    }
    
 .tekst{
@@ -47,6 +53,12 @@ h3{
    line-height: 19px;
    align-content: center;
    }
+
+.tekst p {
+   font-family: 'Roboto';
+   font-weight: 300;
+   color: var(--secondary-color);
+}
    
 .tagline{
       display: flex;
@@ -62,19 +74,19 @@ h3{
    
 .tag{
    cursor: pointer;
-   border: solid black 1px;
+   border: solid #6B6B6B 1px;
    width: max-content;
    border-radius: 15px;
    padding: 3px 10px;
    font-size: 13px;
    margin: 4px;
-  
-   /* box-shadow: black 4px 4px 4px ; */
+   font-family: 'Roboto';
+   color: #6B6B6B;
    }
 
 .tag:hover {
-   color: #24B9E9;
-   border: solid #24B9E9 1px;
+   color: var(--primary-color-blue);
+   border: solid var(--primary-color-blue) 1px;
     
 }
     

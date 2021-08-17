@@ -23,6 +23,9 @@ export class InterestsComponent implements OnInit {
 
   sessionUserID = sessionStorage.getItem('userID');
 
+  test = "testOK";
+  testniet ="testNOK";
+
 
 
   ngOnInit(): void {
@@ -65,6 +68,6 @@ clickedTagsToUserCategoryTable(category: any) {
 
 }
 
-  
+
 
 }

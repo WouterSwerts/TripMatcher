@@ -1,5 +1,5 @@
 .footerDisclaimer {
-   background: #303030;
+   background: var(--secondary-color);
    height: 50px;
    display: flex;
    align-items: center;

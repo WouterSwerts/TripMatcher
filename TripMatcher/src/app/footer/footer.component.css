@@ -31,7 +31,7 @@
    font-size: 18px;
    line-height: 22px;
    text-align: center;
-   color: #303030;
+   color: var(--secondary-color);
    padding-left: 80px;
    padding-right: 80px;
 }
@@ -48,7 +48,7 @@
    font-size: 26px;
    line-height: 31px;
    text-align: center;
-   color: #303030;
+   color: var(--secondary-color);
    margin: 0;
 }
 
@@ -63,7 +63,7 @@
 .footerButton button {
    width: 228px;
    height: 54px;
-   background: #24B9E9;
+   background: var(--primary-color-blue);
    border-radius: 100px;
    border-style: none;
    font-family: Inter;
