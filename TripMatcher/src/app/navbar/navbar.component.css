@@ -13,15 +13,16 @@
    justify-content:flex-end;
    width: 203px;
    min-height: 198px;
-   background: #303030;
+   background: var(--secondary-color);
    opacity: 0.8;
-   box-shadow: -5px 5px 0px #24B9E9;
+   box-shadow: -5px 5px 0px var(--primary-color-blue);
    padding-left: 25px;
    padding-bottom: 40px;
    position: absolute;
    margin: 0;
    right: 0px;
    top: 0px;
+   
 }
 
 .navBarMobile {
@@ -57,7 +58,7 @@ a {
 }
 
 .blauwTrip {
-   color: #24B9E9;
+   color: var(--primary-color-blue);
 }
 
 
@@ -71,9 +72,9 @@ a {
 .navBarPersonal {
    display: none;
    position: absolute;
-   background: #303030;
+   background: var(--secondary-color);
    opacity: 0.85;
-   box-shadow: 5px 5px 0px #24B9E9;
+   box-shadow: 5px 5px 0px var(--primary-color-blue);
    padding: 10px 20px;
    /* margin-top: 15px; */
 
@@ -95,7 +96,7 @@ a {
 
 a {
    text-decoration: none;
-   color: black;
+   color: var(--secondary-color);
    font-size: 16px;
    font-weight: 400;
 }
@@ -119,11 +120,6 @@ a:hover {
 }
 
 .activities p {
-   /* border: 1px solid white;
-   border-radius: 15px;
-   padding: 5px 10px;
-   margin-right: 4px; */
-   /* width: fit-content; */
    margin: 0;
    margin-bottom: 15px;
    margin-right: 15px;
@@ -139,7 +135,6 @@ a:hover {
    justify-content:space-around;
    flex-direction: row;
    padding-bottom: 10px;
-   /* border: 1px solid black; */
 }
 
 .padding {
@@ -155,7 +150,7 @@ a:hover {
 }
 
 .blauwTrip {
-   color: #24B9E9;
+   color: var(--primary-color-blue);
 
 }
 

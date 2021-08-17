@@ -22,17 +22,6 @@
           *ngFor="let activity of this.apiActivities.activity">{{activity["Category_name"]}}</p>
       </div>
     </div>
-    <!-- <div class="menuItem">
-      <a class="padding" routerLink="">Destinations</a>
-      <div class="navBarPersonal margin destinations">
-        <p (click)="filter.filterCountry(Belgium)">Belgium</p>
-        <p (click)="filter.filterCountry(Netherlands)">Netherlands</p>
-        <p (click)="filter.filterCountry(France)">France</p>
-        <p (click)="filter.filterCountry(Italy)">Italy</p>
-        <p (click)="filter.filterCountry(Germany)">Germany</p>
-        <p (click)="filter.showAllTrips()">All Countries</p>
-      </div>
-    </div> -->
     <div class="menuItem">
       <a (click)="openNavBarPersonal()">
         <!-- <a routerLink="PersonalPage"> -->
@@ -42,7 +31,7 @@
       </a>
       <div class="navBarPersonal">
         <div>
-          <p *ngIf="userName != undefined" (click)="topp()">To personal page</p>
+          <p *ngIf="userName != undefined" (click)="topp()">To profile page</p>
           <p *ngIf="userName != undefined" (click)="openSettings()">Account Settings</p>
           <p *ngIf="userName != undefined" (click)="signOut()">Sign Out</p>
           <p *ngIf="userName == undefined" (click)="openRegister()">Register</p>

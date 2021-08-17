@@ -16,6 +16,9 @@ export class PersonalPageComponent implements OnInit {
   suggestions = true;
   interests = false;
 
+  
+
+
 
 
   constructor(public credentials: CredentialsService, public router: Router) { }
@@ -26,6 +29,8 @@ export class PersonalPageComponent implements OnInit {
     this.userName = sessionStorage.getItem('userName');
 
     // window.location.reload();
+
+
     
   }
 

@@ -37,6 +37,7 @@ export class FilterService {
   showAllTrips() {
     this.database.getTrips().subscribe((data) => {
       this.apiTrip = data;
+      this.target.scrollIntoView({behavior: "smooth"});
     })
   }
 

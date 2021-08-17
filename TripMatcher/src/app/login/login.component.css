@@ -5,7 +5,7 @@
    font-weight: 800;
    font-size: 36px;
    line-height: 43px;
-   color: #303030;
+   color: var(--secondary-color);
 }
 
 .loginTitle p {
@@ -13,7 +13,7 @@
    font-weight: 300;
    font-size: 16px;
    line-height: 19px;
-   color: #303030;
+   color: var(--secondary-color);
 }
 
 form {
@@ -27,7 +27,7 @@ label {
    font-weight: 600;
    font-size: 14.3355px;
    line-height: 17px;
-   color: #303030;
+   color: var(--secondary-color);
    margin-bottom: 12px;
 }
 
@@ -37,14 +37,13 @@ label {
 
 input {
    height: 44px;
-   /* width: 223px; */
 }
 
 .button {
    margin-top: 20px;
    width: 181px;
    height: 47px;
-   background: #24B9E9;
+   background: var(--primary-color-blue);
    border-radius: 7px;
    border-style: none;
    font-style: normal;
@@ -62,7 +61,7 @@ input {
 }
 
 a {
-   color: #24B9E9;
+   color: var(--primary-color-blue);
 }
 
 .loginPassword {

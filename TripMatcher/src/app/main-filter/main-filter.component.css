@@ -11,7 +11,7 @@
 }
 
 .filterTekst p{
-   color: #24B9E9;
+   color: var(--primary-color-blue);
    font-family: Inter;
    font-style: normal;
    font-weight: 1000;
@@ -32,13 +32,13 @@
 .filterBox {
    width: 99px;
    height: 99px;
-   background: #303030;
-   box-shadow: 10px 10px 0px #24B9E9;
+   background: var(--secondary-color);
+   box-shadow: 10px 10px 0px var(--primary-color-blue);
    margin: 12px;
 }
 
 .filterBox p {
-   color: #F2F2F2;
+   color: var( --text-color-light);
    margin: 10px;
    font-family: Inter;
    font-style: normal;
