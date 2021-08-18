@@ -6,7 +6,8 @@
     <h3>Your interests</h3>
     <p>When I close my eyes and think of my ideal vacation, I am in ...</p>
     <div class="tagsContainer">
-      <p *ngFor="let tag of this.apiTags1.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])">
+      <p *ngFor="let tag of this.apiTags1.Qtags" (click)="clickedTagsToUserCategoryTable(tag['Category_id'])"
+        id="{{tag['Category_name']}}">
         {{tag["Category_name"]}}</p>
 
     </div>
