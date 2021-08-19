@@ -18,6 +18,7 @@ export class DatabaseService {
   menuActivitiesUrl = "http://localhost/TripMatcher/TripMatcher/apiMenuActivities.php";
   questionTagsUrl = "http://localhost/TripMatcher/TripMatcher/apiQuestionTags.php";
   suggestionsTripsUrl = "http://localhost/TripMatcher/TripMatcher/apiSuggestionsTrips.php";
+  selectedTagsInterestsUrl = "http://localhost/TripMatcher/TripMatcher/apiSelectedTagsInterests.php";
 
   // Post to DB
   registrationUrl = "http://localhost/TripMatcher/TripMatcher/apiPost.php";
@@ -68,6 +69,10 @@ export class DatabaseService {
 
   getSuggestionsTripsUser(userID: any): Observable <any> {
     return this.http.get(`${this.suggestionsTripsUrl}?userID=${userID}`);
+  }
+
+  getSelectedTagsInterests(userID: any): Observable <any> {
+    return this.http.get(`${this.selectedTagsInterestsUrl}?userID=${userID}`);
   }
 
 

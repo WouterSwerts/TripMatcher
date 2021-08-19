@@ -4,7 +4,7 @@
       <h3>Your interests and preferences</h3>
     </div>
     <div class="favoriteTagsContainer">
-      <p class="tag">text X</p>
+      <p *ngFor="let tag of this.SuggestionsTripsUser.category_id" class="tag">{{tag["Category_name"]}} X</p>
     </div>
     <p>View and edit your preferences</p>
   </div>
