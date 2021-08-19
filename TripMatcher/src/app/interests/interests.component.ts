@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { DatabaseService } from '../database.service';
 
+import { FilterService } from '../filter.service';
+
 @Component({
   selector: 'app-interests',
   templateUrl: './interests.component.html',
@@ -9,7 +11,7 @@ import { DatabaseService } from '../database.service';
 })
 export class InterestsComponent implements OnInit {
 
-  constructor(public database: DatabaseService) { }
+  constructor(public database: DatabaseService, public filter: FilterService) { }
 
   apiTags1: any;
   apiTags2: any;
@@ -26,7 +28,39 @@ export class InterestsComponent implements OnInit {
   test = "testOK";
   testniet ="testNOK";
 
+  arrayActivities: any = [];
 
+  arrayPersonalActivities: any = [];
+
+  apiActivities: any;
+
+  SuggestionsTripsUser: any;
+
+  selectedTags() {
+    for (let activity of this.apiActivities.activity) {
+      this.arrayActivities.push(activity["Category_name"]);
+    }
+  
+    for (let activityP of this.SuggestionsTripsUser.category_id) {
+      this.arrayPersonalActivities.push(activityP["Category_name"]);
+    }
+  
+    for (let i = 0; i < this.arrayActivities.length; i++) {
+  
+      if (this.arrayActivities.includes(this.arrayPersonalActivities[i])) {
+        const id = document.getElementById(this.arrayPersonalActivities[i]);
+  
+        if (id != undefined) {
+  
+          id.classList.add("tagActive");
+        }
+      
+      } else {
+        
+      }
+  }
+  
+  }
 
   ngOnInit(): void {
 
@@ -58,6 +92,16 @@ export class InterestsComponent implements OnInit {
       this.apiTags9 = data;
     })
 
+    this.database.getMenuActivities().subscribe((data) => {
+      this.apiActivities = data;
+    })
+
+    this.filter.filterSuggestionsUser(this.sessionUserID);
+
+   
+    this.database.getSelectedTagsInterests(this.sessionUserID).subscribe((data) => {
+      this.SuggestionsTripsUser = data
+      })
 
   }
 
@@ -65,9 +109,8 @@ clickedTagsToUserCategoryTable(category: any) {
 
   this.database.addTagsToUser({"User_id":this.sessionUserID, "Category_id":category}).subscribe(result=>console.log(result));
 
-
+  this.selectedTags();
 }
-
 
 
 }

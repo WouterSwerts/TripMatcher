@@ -18,10 +18,13 @@
 
    .favoriteTagsContainer {
       margin-left: 100px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
    }
 
    .favoriteTags p {
-      margin-left: 100px;
+      margin-left: 20px;
    }
    
    .activiteit{

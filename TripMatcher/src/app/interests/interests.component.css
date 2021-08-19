@@ -74,11 +74,11 @@ h3 {
    color: var(--primary-color-blue);
 }
 
-.tagsContainer .active {
+/* .tagsContainer .active {
    border: var(--primary-color-blue) solid 1px;
    color: white;
    background-color: var(--primary-color-blue);
-}
+} */
 
 
 .interestsFooter img {
@@ -138,6 +138,18 @@ h3 {
 
 .tagsContainer p {
    font-size: 17px;
+}
+
+.tagsContainer .tagActive {
+   border: var(--primary-color-blue) solid 1px;
+   color: white;
+   background-color: var(--primary-color-blue);
+}
+
+.tagsContainer .tagActive:hover {
+   border: #6B6B6B solid 1px;
+   color: #6B6B6B;
+   background-color: white;
 }
 
 }
