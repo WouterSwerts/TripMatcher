@@ -34,6 +34,7 @@ export class SuggestionsComponent implements OnInit {
 
   deleteInDB(tagName: any) {
     this.database.deleteItem(tagName).subscribe(result=> console.log(result));
+    this.ngOnInit();
   }
 
 

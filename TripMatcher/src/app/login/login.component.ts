@@ -9,6 +9,8 @@ import { OverlayComponent } from '../overlay/overlay.component';
 
 import { OpenOverlayService } from '../open-overlay.service';
 
+// import { NavbarComponent } from '../navbar/navbar.component';
+
 
 
 @Component({
@@ -43,6 +45,8 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('userName', this.apiLogin.name);
         sessionStorage.setItem('userID', this.apiLogin.id);
         this.topersonalpage.toPersonalPage();
+        // this.navbar.ngOnInit();
+
         
         
         

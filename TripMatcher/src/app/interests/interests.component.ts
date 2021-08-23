@@ -103,6 +103,11 @@ export class InterestsComponent implements OnInit {
       this.SuggestionsTripsUser = data
       })
 
+
+      // this.selectedTags();
+
+    
+
   }
 
 clickedTagsToUserCategoryTable(category: any) {
@@ -110,6 +115,9 @@ clickedTagsToUserCategoryTable(category: any) {
   this.database.addTagsToUser({"User_id":this.sessionUserID, "Category_id":category}).subscribe(result=>console.log(result));
 
   this.selectedTags();
+
+
+
 }
 
 
