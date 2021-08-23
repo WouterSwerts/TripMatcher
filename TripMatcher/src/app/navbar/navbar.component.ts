@@ -48,6 +48,8 @@ export class NavbarComponent implements OnInit {
 
     // this.refreshPage();
 
+    
+
   }
 
   
@@ -73,12 +75,14 @@ export class NavbarComponent implements OnInit {
 
   openNavBarPersonal() {
     this.openNavBarPersonalDisplay =! this.openNavBarPersonalDisplay;
+    this.ngOnInit();
   };
 
   signOut() {
     sessionStorage.clear();
     this.router.navigate([""]);
     this.openNavBarPersonalDisplay = false;
+    this.ngOnInit();
   }
 
   openLogin() {
