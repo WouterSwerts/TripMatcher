@@ -28,6 +28,14 @@ export class SuggestionsComponent implements OnInit {
       this.SuggestionsTripsUser = data
       })
 
+    
+
   }
+
+  deleteInDB(tagName: any) {
+    this.database.deleteItem(tagName).subscribe(result=> console.log(result));
+  }
+
+
 
 }

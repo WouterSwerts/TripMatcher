@@ -10,21 +10,31 @@ export class DatabaseService {
   extralijst = [];
 
   // Get from DB
-  baseUrl = "http://localhost/TripMatcher/TripMatcher/api.php";
-  tripsUrl = "http://localhost/TripMatcher/TripMatcher/apiTrips.php";
-  tagsUrl = "http://localhost/TripMatcher/TripMatcher/apiTags.php";
-  tripsCountryUrl = "http://localhost/TripMatcher/TripMatcher/apiTripCountry.php";
-  filterCategoryUrl = "http://localhost/TripMatcher/TripMatcher/apiFilterCategory.php";
-  menuActivitiesUrl = "http://localhost/TripMatcher/TripMatcher/apiMenuActivities.php";
-  questionTagsUrl = "http://localhost/TripMatcher/TripMatcher/apiQuestionTags.php";
-  suggestionsTripsUrl = "http://localhost/TripMatcher/TripMatcher/apiSuggestionsTrips.php";
-  selectedTagsInterestsUrl = "http://localhost/TripMatcher/TripMatcher/apiSelectedTagsInterests.php";
+  baseUrl = "http://localhost/TripMatcher/TripMatcher/API's/api.php";
+  tripsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTrips.php";
+  tagsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTags.php";
+  tripsCountryUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTripCountry.php";
+  filterCategoryUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiFilterCategory.php";
+  menuActivitiesUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiMenuActivities.php";
+  questionTagsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiQuestionTags.php";
+  suggestionsTripsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiSuggestionsTrips.php";
+  selectedTagsInterestsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiSelectedTagsInterests.php";
 
   // Post to DB
-  registrationUrl = "http://localhost/TripMatcher/TripMatcher/apiPost.php";
-  addTagsToUserUrl = "http://localhost/TripMatcher/TripMatcher/apiTagsToUser.php"
+  registrationUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiPost.php";
+  addTagsToUserUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTagsToUser.php"
+
+  // Delete from DB
+
+  deleteTagInterestsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiDeleteTagsInterests.php";
 
   constructor(private http: HttpClient) { }
+
+  // Delete from DB
+  deleteItem(data: any): Observable <any> {
+    return this.http.delete(`${this.deleteTagInterestsUrl}?Category_name=${data}`);
+  }
+
 
     // Post to DB
   postItem(data: object): Observable<any> {
