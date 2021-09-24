@@ -15,7 +15,8 @@ export class DatabaseService {
   tagsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTags.php";
   tripsCountryUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTripCountry.php";
   filterCategoryUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiFilterCategory.php";
-  menuActivitiesUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiMenuActivities.php";
+  // menuActivitiesUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiMenuActivities.php";
+  menuActivitiesUrl = "http://127.0.0.1:8000/api/categorytable";
   questionTagsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiQuestionTags.php";
   suggestionsTripsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiSuggestionsTrips.php";
   selectedTagsInterestsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiSelectedTagsInterests.php";
