@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountrytableController;
 use App\Http\Controllers\CategorytableController;
+use App\Http\Controllers\TriptableController;
+
 use \App\Models\countrytable;
 
 /*
@@ -30,3 +32,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::resource('countrytable', CountrytableController::class);
 
 Route::resource('categorytable', CategorytableController::class);
+
+Route::resource('triptable', TriptableController::class);
