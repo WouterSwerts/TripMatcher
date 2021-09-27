@@ -1,41 +1,68 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\apiModel;
+use App\Models\Triptable;
 use Illuminate\Support\Facades\Request;
+
 
 class apiController extends Controller
 {
     public function index()
     {
-        return apiModel::all();
+        $apiModel = Triptable::all();
+        return view('index', compact('apiModel'));
     }
 
-    public function show(apiModel $article)
+    public function show(Request $article)
     {
-        return $article;
+        $apiModel = Triptable::all();
+        return view('welcome', compact('apiModel'));
     }
-
+    public function create()
+    {
+        return view('create');
+    }
+    
     public function store(Request $request)
     {
-        $article = apiModel::create($request->all());
+        $storeData = $request->validate([
+            'Image' => 'required|max:500',
+            'Title' => 'required|max:255',
+            'Summary' => 'required|max:500',
+            'Country_id' => 'required|max:10',
+            'Added_date' => 'required|max:500',
+        ]);
+        $apiModel = Triptable::create($storeData);
 
-        return response()->json($article, 201);
+        return redirect('/index')->with('succes', 'Trip has been saved!');
     }
 
-    public function update(Request $request, apiModel $article)
+    public function edit($id)
     {
-        $article->update($request->all());
-
-        return response()->json($article, 200);
+        $apiModel = Triptable::findOrFail($id);
+        return view('edit', compact('apiModel'));
+    }
+    
+    
+    public function update(Request $request, $id)
+    {
+        $updateData = $request->validate([
+            'Image' => 'required|numeric',
+            'Title' => 'required|max:255',
+            'Summary' => 'required|max:500',
+            'Country_id' => 'required|max:10',
+            'Added_date' => 'required|max:500',
+        ]);
+        Triptable::whereId($id)->update($updateData);
+        return redirect('/index')->with('succes', 'Trip has been updated');
     }
 
-    public function delete(apiModel $article)
+    public function destroy($id)
     {
-        $article->delete();
+        $apiModel = Triptable::findOrFail($id);
+        $apiModel->delete();
 
-        return response()->json(null, 204);
+        return redirect('/index')->with('succes', 'Trip has been deleted');
     }
 }
 

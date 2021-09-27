@@ -1,0 +1,91 @@
+p {
+   color: var(--secondary-color);
+}
+
+.activiteit{
+   display: flex;
+   height: 320px;
+   margin-bottom: 1rem;
+   background-color: var(--background-color-light);
+   position: relative;
+   flex-direction: column;
+   }
+
+.tripImage {
+   flex-grow: 2;
+   
+}
+
+.tripContent {
+   flex-grow: 1;
+   width: auto;
+   
+}
+   
+.afbeelding img{
+   height: 320px;
+   width: 900px;
+   }
+    
+.like {
+      position: absolute;
+      left: 900px;
+      top: 10px;
+      z-index: 100;
+    }
+
+   
+h3{
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 1rem;
+      margin-top: 2rem;
+      color: var(--secondary-color);
+   }
+   
+.tekst{
+   margin: 1rem;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 19px;
+   align-content: center;
+   }
+
+.tekst p {
+   font-family: 'Roboto';
+   font-weight: 300;
+   color: var(--secondary-color);
+}
+   
+.tagline{
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      bottom: 0;
+      left: 1;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      
+   }
+   
+.tag{
+   cursor: pointer;
+   border: solid #6B6B6B 1px;
+   width: max-content;
+   border-radius: 15px;
+   padding: 3px 10px;
+   font-size: 13px;
+   margin: 4px;
+   font-family: 'Roboto';
+   color: #6B6B6B;
+   }
+
+.tag:hover {
+   color: var(--primary-color-blue);
+   border: solid var(--primary-color-blue) 1px;
+    
+}
+    
+

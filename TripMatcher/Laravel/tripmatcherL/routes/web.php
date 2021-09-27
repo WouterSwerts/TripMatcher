@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\apiController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('home.index');
+Route::get('/edit', function () {
+    return view('edit');
+})->name('index.edit');
+Route::delete('/delete', function () {
+    return view('delete');
+})->name('index.delete');
+Route::post('apiModel/create', function () {
+    return view('create');
+})->name('index.create');
+
+Route::resource('apiModel', apiController::class);
