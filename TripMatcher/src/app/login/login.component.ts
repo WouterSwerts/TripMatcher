@@ -39,11 +39,11 @@ export class LoginComponent implements OnInit {
     this.databaseService.getItem(this.loginFormulier.controls.Lemail.value).subscribe((data) => {
       this.apiLogin = data;
 
-      if (this.apiLogin.email == this.loginFormulier.controls.Lemail.value && this.apiLogin.password == this.loginFormulier.controls.Lpassword.value) {
+      if (this.apiLogin.user[0].Email == this.loginFormulier.controls.Lemail.value && this.apiLogin.user[0].Password == this.loginFormulier.controls.Lpassword.value) {
         this.overlay.closeOverlay();
-        sessionStorage.setItem('userEmail', this.apiLogin.email);
-        sessionStorage.setItem('userName', this.apiLogin.name);
-        sessionStorage.setItem('userID', this.apiLogin.id);
+        sessionStorage.setItem('userEmail', this.apiLogin.user[0].Email);
+        sessionStorage.setItem('userName', this.apiLogin.user[0].Name);
+        sessionStorage.setItem('userID', this.apiLogin.user[0].id);
         this.topersonalpage.toPersonalPage();
         // this.navbar.ngOnInit();
 
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
         
         
       } else {
-        console.log("fout");
+        console.log("fout", this.apiLogin.user[0].Name, this.apiLogin.Password, this.apiLogin.Email);
       }
     })
     // window.location.reload();

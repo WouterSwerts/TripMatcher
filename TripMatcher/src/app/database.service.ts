@@ -10,8 +10,10 @@ export class DatabaseService {
   extralijst = [];
 
   // Get from DB
-  baseUrl = "http://localhost/TripMatcher/TripMatcher/API's/api.php";
-  tripsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTrips.php";
+  // baseUrl = "http://localhost/TripMatcher/TripMatcher/API's/api.php";
+  baseUrl = "http://127.0.0.1:8000/api/usertable";
+  // tripsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTrips.php";
+  tripsUrl = "http://127.0.0.1:8000/api/triptable";
   tagsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTags.php";
   tripsCountryUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTripCountry.php";
   filterCategoryUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiFilterCategory.php";
@@ -22,8 +24,10 @@ export class DatabaseService {
   selectedTagsInterestsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiSelectedTagsInterests.php";
 
   // Post to DB
-  registrationUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiPost.php";
-  addTagsToUserUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTagsToUser.php"
+  // registrationUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiPost.php";
+  registrationUrl = "http://127.0.0.1:8000/api/usertableCreate";
+  // addTagsToUserUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTagsToUser.php";
+  addTagsToUserUrl = "http://127.0.0.1:8000/api/usertags";
 
   // Delete from DB
 
@@ -51,7 +55,8 @@ export class DatabaseService {
 
    // Get from DB
   getItem(login: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}?user=${login}`);
+    // return this.http.get(`${this.baseUrl}?user=${login}`);
+    return this.http.get(`${this.baseUrl}/${login}`);
   }
 
   getTrips(): Observable<any> {

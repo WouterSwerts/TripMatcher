@@ -27,7 +27,7 @@ export class RegistrationFormComponent implements OnInit {
   })
 
   submitRegistration() {
-    this.databank.postItem({"name":this.registratieFormulier.controls.Rname.value,"email":this.registratieFormulier.controls.Remail.value, "password":this.registratieFormulier.controls.Rpassword.value}).subscribe(result=>console.log(result));
+    this.databank.postItem({"name":this.registratieFormulier.controls.Rname.value,"email":this.registratieFormulier.controls.Remail.value, "password":this.registratieFormulier.controls.Rpassword.value, 'photo':'None'}).subscribe(result=>console.log(result));
 
     this.overlay.closeOverlay();
         sessionStorage.setItem('userEmail', this.registratieFormulier.controls.Remail.value);

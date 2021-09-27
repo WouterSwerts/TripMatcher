@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categorytable;
+use App\Models\Triptable;
 use Illuminate\Http\Request;
 
-class CategorytableController extends Controller
+class TriptableController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,10 @@ class CategorytableController extends Controller
      */
     public function index()
     {
-        $category = Categorytable::all();
+        $trip = Triptable::all();
 
         return response()->json([
-            'activity' => $category
+            'trip' =>$trip
         ], 200);
     }
 
@@ -48,9 +48,18 @@ class CategorytableController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($Trip_id)
     {
-        // $trip_id = Categorytable::where('Trip_id',  "=", $id)->on('')
+        $trip = Triptable::where('Trip_id',  "=", $Trip_id)->get();
+        if(!$trip) {
+            return response()->json([
+                'message' => 'Post not fount'
+            ], 404);
+        }
+
+        return response()->json([
+            'trip' => $trip
+        ], 200);
     }
 
     /**

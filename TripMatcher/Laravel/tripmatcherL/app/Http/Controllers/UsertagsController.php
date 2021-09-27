@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categorytable;
+use App\Models\Usertags;
 use Illuminate\Http\Request;
 
-class CategorytableController extends Controller
+class UsertagsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,7 @@ class CategorytableController extends Controller
      */
     public function index()
     {
-        $category = Categorytable::all();
-
-        return response()->json([
-            'activity' => $category
-        ], 200);
+        //
     }
 
     /**
@@ -39,7 +35,14 @@ class CategorytableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Usertags::create([
+            'User_id' => $request->User_id,
+            'Category_id' => $request->Category_id
+        ]);
+
+        return response()->json([
+            'message' => 'Tags added'
+        ]);
     }
 
     /**
@@ -50,7 +53,7 @@ class CategorytableController extends Controller
      */
     public function show($id)
     {
-        // $trip_id = Categorytable::where('Trip_id',  "=", $id)->on('')
+        //
     }
 
     /**

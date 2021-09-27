@@ -4,6 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountrytableController;
 use App\Http\Controllers\CategorytableController;
+use App\Http\Controllers\TriptableController;
+use App\Http\Controllers\UsertableController;
+use App\Http\Controllers\UsertagsController;
 use \App\Models\countrytable;
 
 /*
@@ -21,12 +24,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Route::get('countrytable', "CountrytableController@index"); // List Posts
-//Route::post('countrytable', "CountrytableController@store"); // Create Post
-//Route::get('countrytable/{id}', "CountrytableController@show"); // Detail of Post
-//Route::put('countrytable/{id}', "CountrytableController@update"); // Update Post
-//Route::delete('countrytable/{id}', "CountrytableController@destroy"); // Delete Post
-
 Route::resource('countrytable', CountrytableController::class);
 
 Route::resource('categorytable', CategorytableController::class);
+
+Route::resource('triptable', TriptableController::class);
+
+Route::resource('usertable', UsertableController::class);
+
+Route::resource('usertableCreate', UsertableController::class)->only('store');
+
+Route::resource('usertags', UsertagsController::class)->only('store');
+
+// Route::resource('triptable', TriptableController::class, [
+//     'id' => 'Trip_id'
+// ]);
