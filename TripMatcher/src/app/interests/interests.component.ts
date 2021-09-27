@@ -112,6 +112,8 @@ export class InterestsComponent implements OnInit {
 
 clickedTagsToUserCategoryTable(category: any) {
 
+  console.log(this.sessionUserID, category);
+
   this.database.addTagsToUser({"User_id":this.sessionUserID, "Category_id":category}).subscribe(result=>console.log(result));
 
   this.selectedTags();

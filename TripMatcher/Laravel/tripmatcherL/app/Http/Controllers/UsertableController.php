@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categorytable;
+use App\Models\Usertable;
 use Illuminate\Http\Request;
 
-class CategorytableController extends Controller
+class UsertableController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,10 @@ class CategorytableController extends Controller
      */
     public function index()
     {
-        $category = Categorytable::all();
+        $user = Usertable::all();
 
         return response()->json([
-            'activity' => $category
+            'user' => $user
         ], 200);
     }
 
@@ -39,7 +39,16 @@ class CategorytableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Usertable::create([
+            'Name' => $request->name,
+            'Email' => $request->email,
+            'Password' => $request->password,
+            'Photo' => $request->photo
+        ]);
+
+        return response()->json([
+            'message' => "User created"
+        ], 200);
     }
 
     /**
@@ -50,7 +59,17 @@ class CategorytableController extends Controller
      */
     public function show($id)
     {
-        // $trip_id = Categorytable::where('Trip_id',  "=", $id)->on('')
+        $user = Usertable::where('Email', '=', $id)->get();
+        if(!$user) {
+            return response()->json([
+                'message' => 'Post not fount'
+            ], 404);
+        }
+
+        return response()->json([
+            'user' => $user
+        ], 200);
+
     }
 
     /**

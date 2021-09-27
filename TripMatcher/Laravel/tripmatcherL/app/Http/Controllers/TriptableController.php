@@ -50,7 +50,7 @@ class TriptableController extends Controller
      */
     public function show($Trip_id)
     {
-        $trip = Triptable::find($Trip_id);
+        $trip = Triptable::where('Trip_id',  "=", $Trip_id)->get();
         if(!$trip) {
             return response()->json([
                 'message' => 'Post not fount'
