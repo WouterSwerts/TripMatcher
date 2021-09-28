@@ -16,6 +16,8 @@ export class PersonalPageComponent implements OnInit {
   suggestions = true;
   interests = false;
 
+  admin = false;
+
   
 
 
@@ -30,6 +32,11 @@ export class PersonalPageComponent implements OnInit {
 
     // window.location.reload();
 
+    if(this.userEmail = 'test@test.be') {
+      this.admin = true
+    } else {
+      this.admin = false
+    }
 
     
   }
