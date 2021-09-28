@@ -12,8 +12,8 @@ export class DatabaseService {
   // Get from DB
   // baseUrl = "http://localhost/TripMatcher/TripMatcher/API's/api.php";
   baseUrl = "http://127.0.0.1:8000/api/usertable";
-  // tripsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTrips.php";
-  tripsUrl = "http://127.0.0.1:8000/api/triptable";
+  tripsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTrips.php";
+  // tripsUrl = "http://127.0.0.1:8000/api/triptable";
   tagsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTags.php";
   tripsCountryUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTripCountry.php";
   filterCategoryUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiFilterCategory.php";
