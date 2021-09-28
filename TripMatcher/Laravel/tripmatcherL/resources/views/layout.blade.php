@@ -6,8 +6,15 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Laravel 8|7|6 CRUD App Example</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/app.css"> 
+
    </head>
    <body>
+      <div>
+
+
+      </div>
+
       <div class="container">
          @yield('content')
       </div>
@@ -17,3 +24,4 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" type="text/js"></script>
    </body>
 </html>
+
