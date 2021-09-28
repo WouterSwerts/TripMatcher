@@ -67,7 +67,8 @@ class TriptablesController extends Controller
      */
     public function edit($id)
     {
-        $admin = Triptables::findOrFail($id);
+        $admin = Triptables::where('Trip_id', '=', $id)->get();
+        
         return view('edit', compact('admin'));
     }
 
@@ -81,13 +82,13 @@ class TriptablesController extends Controller
     public function update(Request $request, $id)
     {
         $updateData = $request->validate([
-            'Image' => 'required|max:255',
+            'Image' => 'max:255',
             'Title' => 'required|max:255',
-            'Summary' => 'required|max:255',
+            'Summary' => 'required|max:1000',
             'Country_id' => 'required|numeric',
             'Added_date' => 'required|max:255',
         ]);
-        Triptables::whereId($id)->update($updateData);
+        Triptables::where('Trip_id', '=', $id)->update($updateData);
         return redirect('/index')->with('completed', 'Trip has been updated');
     }
 
@@ -99,7 +100,7 @@ class TriptablesController extends Controller
      */
     public function destroy($id)
     {
-        $admin = Triptables::findOrFail($id);
+        $admin = Triptables::where('Trip_id', '=', $id);
         $admin->delete();
 
         return redirect('/index')->with('completed', 'Trip has been deleted');
