@@ -32,7 +32,7 @@
       <div class="navBarPersonal">
         <div>
           <p *ngIf="userName != undefined" (click)="topp()">To profile page</p>
-          <p *ngIf="userName != undefined" (click)="openSettings()">Account Settings</p>
+          <!-- <p *ngIf="userName != undefined" (click)="openSettings()">Account Settings</p> -->
           <p *ngIf="userName != undefined" (click)="signOut()">Sign Out</p>
           <p *ngIf="userName == undefined" (click)="openRegister()">Register</p>
           <p *ngIf="userName == undefined" (click)="openLogin()">Sign in</p>
