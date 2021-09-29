@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\TripImage;
 use App\Models\Triptables;
+use Facade\FlareClient\Stacktrace\File;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TriptablesController extends Controller
 {
@@ -37,13 +40,23 @@ class TriptablesController extends Controller
     public function store(Request $request)
     {
         $storeData = $request->validate([
-            'Image' => 'required|max:255',
+            'Image' => 'required|max:2048',
             'Title' => 'required|max:255',
-            'Summary' => 'required|max:255',
+            'Summary' => 'required|max:1000',
             'Country_id' => 'required|numeric',
             'Added_date' => 'required|max:255',
         ]);
-        $admin = Triptables::create($storeData);
+
+        $input = $request->all();
+
+        if ($image = $request->file('Image')) {
+            $destinationPath = '../../../src/assets/img/Trip';
+            $profileImage = '/assets/img/Trip'."/".$image->getClientOriginalName();
+            $image->move($destinationPath, $profileImage);
+            $input['Image'] = "$profileImage";
+        }
+
+        $admin = Triptables::create($input);
 
         return redirect('/index')->with('completed', 'Trip has been saved!');
     }
@@ -82,13 +95,23 @@ class TriptablesController extends Controller
     public function update(Request $request, $id)
     {
         $updateData = $request->validate([
-            'Image' => 'max:255',
+            'Image' => 'max:2048',
             'Title' => 'required|max:255',
             'Summary' => 'required|max:1000',
             'Country_id' => 'required|numeric',
             'Added_date' => 'required|max:255',
         ]);
-        Triptables::where('Trip_id', '=', $id)->update($updateData);
+
+        $input = $request->all();
+
+        if ($image = $request->file('Image')) {
+            $destinationPath = 'assets/img/Trip';
+            $profileImage = '/assets/img/Trip'."/".$image->getClientOriginalName();
+            $image->move($destinationPath, $profileImage);
+            $input['Image'] = "$profileImage";
+        }
+
+        Triptables::where('Trip_id', '=', $id)->update($input);
         return redirect('/index')->with('completed', 'Trip has been updated');
     }
 

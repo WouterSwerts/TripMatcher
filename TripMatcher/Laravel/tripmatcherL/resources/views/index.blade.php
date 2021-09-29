@@ -17,7 +17,9 @@
 <div #target class="activiteit">
   <div class="tripImage">
     <div class="afbeelding">
-    <img src="{{$trip->Image}}" alt="img">
+    {{-- <img src="../../../../src{{$trip->Image}}" alt="img"> --}}
+    <img src="../../../../../assets/img/Trip/mountain6.png" alt="img">
+    
     </div> 
   </div>
   <div class="tripContent">

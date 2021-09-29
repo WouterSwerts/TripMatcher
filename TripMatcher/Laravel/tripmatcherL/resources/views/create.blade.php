@@ -19,9 +19,9 @@
     
 
     
-      <form method="post" action="{{route('index.store')}}">
+      <form method="post" action="{{route('index.store')}}" enctype="multipart/form-data" id="upload-image">
         @csrf
-        @method('PATCH')
+        
         <div class="formEdit">
         <div class="leftPartForm">
           <div class="inputForm">

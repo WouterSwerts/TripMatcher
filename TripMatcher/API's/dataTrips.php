@@ -10,7 +10,7 @@ $db = new PDO("mysql:host=$dbHostname; dbname=$dbDatabank", "$dbUsername", "$dbP
 function getAllTrips() {
   global $db;
 
-  $query = "SELECT * FROM tripmatcher.triptable;";
+  $query = "SELECT * FROM tripmatcher.triptables;";
 
   $stmt = $db->prepare($query);
   $stmt->execute();
