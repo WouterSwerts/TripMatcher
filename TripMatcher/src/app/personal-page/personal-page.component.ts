@@ -19,7 +19,8 @@ export class PersonalPageComponent implements OnInit {
   admin = false;
 
   
-
+  active1 = false;
+  active2 = true;
 
 
 
@@ -30,9 +31,11 @@ export class PersonalPageComponent implements OnInit {
     this.userEmail = sessionStorage.getItem('userEmail');
     this.userName = sessionStorage.getItem('userName');
 
+
+
     // window.location.reload();
 
-    if(this.userEmail = 'test@test.be') {
+    if(this.userEmail == 'admin@admin.be') {
       this.admin = true
     } else {
       this.admin = false
@@ -44,11 +47,15 @@ export class PersonalPageComponent implements OnInit {
   goToInterests() {
     this.suggestions = false;
     this.interests = true;
+    this.active1 = true;
+    this.active2 = false;
   }
 
   goToSuggestions() {
     this.suggestions = true;
     this.interests = false;
+    this.active2 = true;
+    this.active1 = false;
   }
 
  

@@ -51,6 +51,7 @@ input {
    line-height: 18px;
    text-align: center;
    color: #FFFFFF;
+   cursor: pointer;
 }
 
 a {

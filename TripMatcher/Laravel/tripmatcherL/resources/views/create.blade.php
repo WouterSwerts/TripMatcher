@@ -26,17 +26,16 @@
         <div class="leftPartForm">
           <div class="inputForm">
               <label for="Title" class="labelForm">Title</label>
-              <input type="text" class="inputField" name="Title"/>
+              <input type="text" class="inputField" name="Title" placeholder="Enter trip name (e.g. Cycling through Water, Bokrijk)"/>
           </div>
           <div class="inputForm">
               <label for="Summary" class="labelForm">Summary</label>
-              <textarea type="text" class="inputField" name="Summary" rows="7">Say something nice about the trip
-              </textarea>
+              <textarea class="inputField" name="Summary" rows="7" placeholder="Say something nice about the trip"></textarea>
           </div>
           <div class="inputForm">
               <label for="Country_id" class="labelForm">Country</label>
               <select type="text" class="inputField" name="Country_id">
-                  <option value="0">Choose Country</option>
+                  <option value="" disabled selected>Choose Country</option>
                   <option value="1">Belgium</option>
                   <option value="2">Netherlands</option>
                   <option value="3">France</option>
@@ -46,7 +45,7 @@
           </div>
           <div class="inputForm">
               <label for="Added_date" class="labelForm">Date of Creation </label>
-              <input type="date" class="inputField" name="Added_date"/>
+              <input type="date" class="inputField" name="Added_date" placeholder="test"/>
           </div>
           <div class="inputForm">
            

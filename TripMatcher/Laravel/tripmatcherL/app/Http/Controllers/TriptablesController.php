@@ -102,13 +102,13 @@ class TriptablesController extends Controller
             'Added_date' => 'required|max:255',
         ]);
 
-        $input = $request->all();
+        $input = request()->except(['_token']);
 
         if ($image = $request->file('Image')) {
-            $destinationPath = 'assets/img/Trip';
-            $profileImage = '/assets/img/Trip'."/".$image->getClientOriginalName();
+            $destinationPath = '../../../src/assets/img/Trip';
+            $profileImage = 'test';
             $image->move($destinationPath, $profileImage);
-            $input['Image'] = "$profileImage";
+            $input['Image'] = "test";
         }
 
         Triptables::where('Trip_id', '=', $id)->update($input);

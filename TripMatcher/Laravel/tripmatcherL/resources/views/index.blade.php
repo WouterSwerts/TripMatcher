@@ -2,6 +2,13 @@
 
 @section('content')
 
+<div class="push-top">
+  @if(session()->get('completed'))
+    <div class="alert alert-success">
+      {{ session()->get('completed') }}  
+    </div><br />
+  @endif
+
 
 <div class="balk">
   <p>ALL TRIPS</p>
@@ -17,8 +24,8 @@
 <div #target class="activiteit">
   <div class="tripImage">
     <div class="afbeelding">
-    {{-- <img src="../../../../src{{$trip->Image}}" alt="img"> --}}
-    <img src="../../../../../assets/img/Trip/mountain6.png" alt="img">
+    <img src="{{$trip->Image}}" alt="img">
+    {{-- <img src="../../../../../Tripmatcher/src/assets/img/Trip/mountain6.png" alt="img"> --}}
     
     </div> 
   </div>

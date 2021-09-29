@@ -24,10 +24,10 @@ export class DatabaseService {
   selectedTagsInterestsUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiSelectedTagsInterests.php";
 
   // Post to DB
-  // registrationUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiPost.php";
-  registrationUrl = "http://127.0.0.1:8000/api/usertableCreate";
-  // addTagsToUserUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTagsToUser.php";
-  addTagsToUserUrl = "http://127.0.0.1:8000/api/usertags";
+  registrationUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiPost.php";
+  // registrationUrl = "http://127.0.0.1:8000/api/usertableCreate";
+  addTagsToUserUrl = "http://localhost/TripMatcher/TripMatcher/API's/apiTagsToUser.php";
+  // addTagsToUserUrl = "http://127.0.0.1:8000/api/usertags";
 
   // Delete from DB
 

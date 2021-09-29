@@ -8,7 +8,7 @@ p {
 .activiteit{
    display: flex;
    height: 320px;
-   margin-bottom: 1rem;
+   margin-bottom: 2rem;
    background-color: var(--background-color-light);
    position: relative;
    }

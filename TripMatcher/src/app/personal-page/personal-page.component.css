@@ -54,7 +54,7 @@ img {
    cursor: pointer;
 }
 
-.profileNavigation a:active {
+.profileNavigation .linkActive {
    display: inline-block;
    text-decoration: underline;
    text-decoration-color: var(--primary-color-blue);

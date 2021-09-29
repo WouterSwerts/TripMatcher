@@ -7,11 +7,9 @@
     </div>
   </div>
   <div class="profileNavigation">
-    <!-- <a routerlink="">Favorites</a> -->
-    <a (click)="goToInterests()">Interests</a>
-    <a (click)="goToSuggestions()">Suggestions</a>
-    <a href="http://127.0.0.1:8000/index">To admin dashboard</a>
-    <!-- <a routerlink="">My Trips</a> -->
+    <a [ngClass]="{'linkActive': active1 === true }" (click)="goToInterests()">Interests</a>
+    <a [ngClass]="{'linkActive': active2 === true }" (click)="goToSuggestions()">Suggestions</a>
+    <a *ngIf="admin" href="http://127.0.0.1:8000/index">To admin dashboard</a>
   </div>
 </div>
 <div class="profileContent">
@@ -21,15 +19,4 @@
 
   <app-interests *ngIf="interests"></app-interests>
 
-
-  <!-- <app-trips></app-trips> -->
-
-
-  <!-- <div class="noContent">
-    <div>
-      <p>There is nothing in your favorites.</p>
-      <p><span class="blue">Begin to explore trips </span>and save your favorites...</p>
-    </div>
-
-  </div> -->
 </div>

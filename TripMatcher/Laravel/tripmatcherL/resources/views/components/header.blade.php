@@ -2,7 +2,7 @@
    <div class="navBarDark">
       <img src="{{ asset('assets/img/LogoDarkTheme.png') }}" alt="logo">
 
-      <a href="">Logout</a>
+      <a href="http://localhost:4200/">Logout</a>
    </div>
    <div class="heroAdmin">
       <h2>Admin Dashboard</h2>
